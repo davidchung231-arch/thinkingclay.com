@@ -1,0 +1,33 @@
+baseURL = 'https://thinkingclay.com/'
+languageCode = 'en-us'
+title = 'Thinking Clay LLC'
+theme = 'accessble-minimalism-hugo-theme'
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
+
+[params]
+author = 'David S. Chung, Esq.'
+description = 'Strategic Business Advisory and Legal Services by David S. Chung, Esq., Attorney at Law, admitted in the State of New York.'
+
+[params.theme]
+  font = 'Inter'
+  headingFont = 'Cormorant Garamond'
+  primaryColor = '#2D1B69'
+  backgroundColor = '#FAFAF8'
+
+[menus]
+  [[menus.footer]]
+    name = 'Terms of Use'
+    url = '/terms/'
+    weight = 1
+  [[menus.footer]]
+    name = 'Privacy Policy'
+    url = '/privacy/'
+    weight = 2
+  [[menus.footer]]
+    name = 'Notice at Collection'
+    url = '/notice-at-collection/'
+    weight = 3
+
+[markup.goldmark.renderer]
+  unsafe = true

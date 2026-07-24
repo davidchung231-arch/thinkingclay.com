@@ -1,0 +1,7 @@
+{{- $css := resources.Get "css/custom.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{{ if .Params.redirect }}
+<meta http-equiv="refresh" content="{{ .Params.redirectDelay | default 3 }};url={{ .Params.redirect }}">
+{{ end }}

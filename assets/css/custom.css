@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --purple: #2D1B69;
+  --bg: #FAFAF8;
+  --text: #2B2B2B;
+  --gold: #C6A87C;
+  --border: #E5E5E3;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+h1, h2, h3, .site-title {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--purple);
+  font-weight: 600;
+}
+
+a {
+  color: var(--purple);
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+.logo-mark {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-animate {
+  animation: logo-bounce-spin 5s ease-in-out infinite;
+}
+
+@keyframes logo-bounce-spin {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(180deg);
+  }
+  50% {
+    transform: translateY(0) rotate(360deg);
+  }
+  75% {
+    transform: translateY(-6px) rotate(540deg);
+  }
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  font-size: 0.85em;
+  color: #666;
+}
+
+.hero {
+  background: var(--purple);
+  color: #fff;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.hero p {
+  color: rgba(255,255,255,0.85);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}

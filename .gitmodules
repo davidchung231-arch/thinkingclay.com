@@ -1,0 +1,3 @@
+[submodule "themes/accessble-minimalism-hugo-theme"]
+	path = themes/accessble-minimalism-hugo-theme
+	url = https://github.com/leonstafford/accessible-minimalism-hugo-theme.git

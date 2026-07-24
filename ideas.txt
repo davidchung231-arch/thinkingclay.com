@@ -1,0 +1,119 @@
+
+
+Thinkingclay.com 으로 먼저 들어가면
+
+=======
+index.md
+
+Ask.  Think.  Solve.
+
+그 밑에 저 로고가 중간
+그거 클릭하면(==> contact.md로 이동) 
+
+Terms of Use | Privacy Policy | Notice at Collection
+=======
+
+
+=======
+contact.md
+
+이메일 폼
+Send 클릭하면 (==> contact_completed.md로 이동 - 이 파일명 더 좋은 거 있으면 알려줘)
+이메일 주소는 페이지 밑에 기재해놔줘.
+
+Terms of Use | Privacy Policy | Notice at Collection
+=======
+
+
+=======
+contact_completed.md
+
+Sent!  (<== 이것을 좀 더 이제 너의 힘든 일이 해결되는데 한걸음 더 나아갔다. 이런 식으로 좋은 표현 있으면 그렇게 하자. professional하고 세련되게)
+
+Thinking Clay LLC is a strategic business advisory company focused on helping businesses solve commercial problems through practical and thoughtful solutions. We will try to get back to you within 3 business days but please expect delays due to volume of incoming cases. (<==이렇게 쓸까? 적절하게 수정해줘. professional 하고 세련되게.)
+
+그리고 3초 후에 다시 index.md로 자동으로 돌아가자.
+Terms of Use | Privacy Policy | Notice at Collection
+=======
+
+
+
+
+=======
+thinkingclay.com/legal
+
+Legal Services
+Business Consulting
+Commercial Transactions
+Contract Negotiation
+
+Outside General Counsel
+
+그 밑에 저 로고가 중간
+그거 클릭하면(==> contact.md로 이동) 
+
+The information contained on this website is provided for general informational purposes only and does not constitute legal advice.
+Viewing this website, contacting or communicating with David S. Chung does not create an attorney-client relationship. An attorney-client relationship is established only through a written engagement agreement.
+Please do not submit confidential or time-sensitive information through this website until an attorney-client relationship has been established.
+Prior results do not guarantee a similar outcome.
+Attorney Advertising.
+
+David S. Chung, Esq. | Admitted in the State of New York | legal@thinkingclay.com | 12 Main St., Princeton, NJ 08540
+
+Terms of Use | Privacy Policy | Notice at Collection
+========
+
+
+
+
+
+=======
+thinkingclay.com/kr
+
+Thinking Clay LLC
+
+Business Strategy. Legal Insight. Practical Solutions.
+
+Helping Korean Businesses Enter and Grow in the U.S.
+
+비즈니스 전략. 법률 전문성. 실질적인 해결책.
+
+서비스
+-미국 시장 진출
+-비즈니스 컨설팅
+-계약 협상 및 상거래
+-기업 법무 자문
+-규제 및 컴플라이언스
+-지식재산권
+-미국 법인 설립 및 운영
+
+그 밑에 저 로고가 중간
+그거 클릭하면(==> contact.md/kr로 이동)
+
+From Korea to the U.S.
+One Partner.  Every Step.
+
+========
+
+
+=======
+contact.md/kr  다 한국어로
+
+이메일 폼
+Send 클릭하면 (==> contact_completed.md로 이동 - 이 파일명 더 좋은 거 있으면 알려줘)
+이메일 주소는 페이지 밑에 기재해놔줘.
+
+Terms of Use | Privacy Policy | Notice at Collection
+=======
+
+
+=======
+contact_completed.md/kr  다 한국어로 
+
+Sent!  (<== 이것을 좀 더 이제 너의 힘든 일이 해결되는데 한걸음 더 나아갔다. 이런 식으로 좋은 표현 있으면 그렇게 하자. professional하고 세련되게)
+
+Thinking Clay LLC is a strategic business advisory company focused on helping businesses solve commercial problems through practical and thoughtful solutions. We will try to get back to you within 3 business days but please expect delays due to volume of incoming cases. (<==이렇게 쓸까? 적절하게 수정해줘. professional 하고 세련되게.)
+
+그리고 3초 후에 다시 index.md로 자동으로 돌아가자.
+Terms of Use | Privacy Policy | Notice at Collection
+=======

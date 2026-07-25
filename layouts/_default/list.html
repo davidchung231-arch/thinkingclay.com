@@ -4,8 +4,9 @@
   {{- partial "head.html" . -}}
 </head>
 <body>
+  {{- partial "header.html" . -}}
   <main id="main-content">
-    <section style="max-width: 1100px; margin: 0 auto; padding: 5rem 2rem 3rem 2rem;">
+    <section style="max-width: 1100px; margin: 0 auto; padding: 5rem 2rem 3rem 2rem; line-height: 1.8;">
       <h1 style="font-family: 'Cormorant Garamond', serif; color: #2D1B69; font-size: 2.4rem; font-weight: 600; margin-bottom: 2rem;">{{ .Title }}</h1>
       {{ .Content }}
     </section>

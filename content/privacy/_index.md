@@ -72,5 +72,4 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
 
 For privacy-related questions or requests, contact us at:
 
-**Email:** hello@thinkingclay.com  
-**Mailing Address:** Thinking Clay LLC, 12 Main St., Princeton, NJ 08540
+**Email:** hello@thinkingclay.com

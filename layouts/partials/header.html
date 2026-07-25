@@ -1,0 +1,15 @@
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+<header style="max-width: 1100px; margin: 0 auto; padding: 1.5rem 2rem 0 2rem;">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <a href="/" aria-label="Thinking Clay home" style="text-decoration:none;">
+      <img src="/images/logo.svg" alt="Thinking Clay logo" class="logo-mark" width="40" height="40" style="display:block;">
+    </a>
+    <nav aria-label="Primary navigation">
+      {{ if eq .RelPermalink "/" }}
+        <a href="/about/" style="font-family:'Inter',sans-serif;color:#2D1B69;font-size:0.85rem;text-decoration:none;letter-spacing:0.05em;border-bottom:1px solid #2D1B69;padding-bottom:2px;">About</a>
+      {{ else }}
+        <a href="/" style="font-family:'Inter',sans-serif;color:#2D1B69;font-size:0.85rem;text-decoration:none;letter-spacing:0.05em;border-bottom:1px solid #2D1B69;padding-bottom:2px;">Home</a>
+      {{ end }}
+    </nav>
+  </div>
+</header>

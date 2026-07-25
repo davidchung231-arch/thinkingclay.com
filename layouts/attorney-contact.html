@@ -1,26 +1,29 @@
-{{- partial "head.html" . -}}
-
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "en" }}">
+<head>
+  {{- partial "head.html" . -}}
+</head>
 <body>
-  <main>
+  <main id="main-content">
     <section style="max-width: 1100px; margin: 0 auto; padding: 5rem 2rem 3rem 2rem; text-align: center;">
       <div style="margin-bottom: 2.5rem;">
         {{ .Content }}
       </div>
 
-      <form id="attorney-contact-form" action="https://formspree.io/f/mkodwylo" method="POST" style="max-width: 500px; margin: 0 auto; line-height: 1.8; text-align: left;">
-        <label style="display: block; margin-bottom: 0.3rem; font-weight: 500; font-size: 0.9rem;">Name</label>
-        <input type="text" name="name" required style="width: 100%; padding: 0.7rem; margin-bottom: 1.2rem; border: 1px solid #E5E5E3; border-radius: 2px; font-family: 'Inter', sans-serif; font-size: 0.95rem; background: #fff;">
+      <form id="attorney-contact-form" action="https://formspree.io/f/mkodwylo" method="POST" style="max-width: 500px; margin: 0 auto; line-height: 1.8; text-align: left;" aria-label="Attorney contact form">
+        <label for="attorney-name" style="display: block; margin-bottom: 0.3rem; font-weight: 500; font-size: 0.9rem;">Name</label>
+        <input type="text" id="attorney-name" name="name" required style="width: 100%; padding: 0.7rem; margin-bottom: 1.2rem; border: 1px solid #E5E5E3; border-radius: 2px; font-family: 'Inter', sans-serif; font-size: 0.95rem; background: #fff;">
 
-        <label style="display: block; margin-bottom: 0.3rem; font-weight: 500; font-size: 0.9rem;">Email</label>
-        <input type="email" name="email" required style="width: 100%; padding: 0.7rem; margin-bottom: 1.2rem; border: 1px solid #E5E5E3; border-radius: 2px; font-family: 'Inter', sans-serif; font-size: 0.95rem; background: #fff;">
+        <label for="attorney-email" style="display: block; margin-bottom: 0.3rem; font-weight: 500; font-size: 0.9rem;">Email</label>
+        <input type="email" id="attorney-email" name="email" required style="width: 100%; padding: 0.7rem; margin-bottom: 1.2rem; border: 1px solid #E5E5E3; border-radius: 2px; font-family: 'Inter', sans-serif; font-size: 0.95rem; background: #fff;">
 
-        <label style="display: block; margin-bottom: 0.3rem; font-weight: 500; font-size: 0.9rem;">Message</label>
-        <textarea name="message" rows="6" required style="width: 100%; padding: 0.7rem; margin-bottom: 1.5rem; border: 1px solid #E5E5E3; border-radius: 2px; font-family: 'Inter', sans-serif; font-size: 0.95rem; background: #fff; resize: vertical;"></textarea>
+        <label for="attorney-message" style="display: block; margin-bottom: 0.3rem; font-weight: 500; font-size: 0.9rem;">Message</label>
+        <textarea id="attorney-message" name="message" rows="6" required style="width: 100%; padding: 0.7rem; margin-bottom: 1.5rem; border: 1px solid #E5E5E3; border-radius: 2px; font-family: 'Inter', sans-serif; font-size: 0.95rem; background: #fff; resize: vertical;"></textarea>
 
         <button type="submit" style="background: #2D1B69; color: #fff; border: none; padding: 0.8rem 2.5rem; font-family: 'Inter', sans-serif; font-size: 0.95rem; cursor: pointer; letter-spacing: 0.05em;">Send</button>
       </form>
 
-      <div id="attorney-success" style="display: none; max-width: 500px; margin: 2.5rem auto 0 auto; background: #F5F5F3; padding: 2rem; border-left: 3px solid #2D1B69; text-align: left;">
+      <div id="attorney-success" style="display: none; max-width: 500px; margin: 2.5rem auto 0 auto; background: #F5F5F3; padding: 2rem; border-left: 3px solid #2D1B69; text-align: left;" role="status" aria-live="polite">
         <p style="margin-top: 0; font-weight: 600; color: #2D1B69;">One Step Closer to Clarity.</p>
         <p style="font-size: 0.9rem; line-height: 1.7; color: #555;">
           Thank you for contacting Thinking Clay. We have received your message and appreciate your interest in our services. We aim to respond within three business days.
@@ -29,7 +32,7 @@
         <button onclick="resetAttorneyForm()" style="margin-top: 1rem; background: transparent; color: #2D1B69; border: 1px solid #2D1B69; padding: 0.5rem 1.5rem; font-family: 'Inter', sans-serif; font-size: 0.85rem; cursor: pointer; margin-left: 0.5rem;">Send another message</button>
       </div>
 
-      <div id="attorney-error" style="display: none; max-width: 500px; margin: 2.5rem auto 0 auto; background: #FDF2F2; padding: 2rem; border-left: 3px solid #C0392B; text-align: left;">
+      <div id="attorney-error" style="display: none; max-width: 500px; margin: 2.5rem auto 0 auto; background: #FDF2F2; padding: 2rem; border-left: 3px solid #C0392B; text-align: left;" role="alert" aria-live="assertive">
         <p style="margin-top: 0; font-weight: 600; color: #C0392B;">Something went wrong.</p>
         <p style="font-size: 0.9rem; line-height: 1.7; color: #555;">
           Please try again or email us directly at <a href="mailto:attorney@thinkingclay.com" style="color: #2D1B69;">attorney@thinkingclay.com</a>.
@@ -51,9 +54,11 @@
     const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mkodwylo';
 
     function resetAttorneyForm() {
-      document.getElementById('attorney-contact-form').style.display = 'block';
+      const form = document.getElementById('attorney-contact-form');
+      form.style.display = 'block';
       document.getElementById('attorney-success').style.display = 'none';
       document.getElementById('attorney-error').style.display = 'none';
+      document.getElementById('attorney-name').focus();
     }
 
     function submitAttorneyContactForm(evt) {
@@ -77,10 +82,14 @@
         form.style.display = 'none';
         successEl.style.display = 'block';
         form.reset();
+        const firstBtn = successEl.querySelector('button');
+        if (firstBtn) firstBtn.focus();
       })
       .catch(function () {
         form.style.display = 'none';
         errorEl.style.display = 'block';
+        const firstBtn = errorEl.querySelector('button');
+        if (firstBtn) firstBtn.focus();
       })
       .finally(function () {
         btn.disabled = false;

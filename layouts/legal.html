@@ -1,7 +1,10 @@
-{{- partial "head.html" . -}}
-
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "en" }}">
+<head>
+  {{- partial "head.html" . -}}
+</head>
 <body>
-  <main>
+  <main id="main-content">
     <section style="max-width: 1100px; margin: 0 auto; padding: 5rem 2rem 3rem 2rem; text-align: center;">
       <div style="margin-bottom: 2.5rem;">
         {{ .Content }}

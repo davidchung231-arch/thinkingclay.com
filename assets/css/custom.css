@@ -8,19 +8,75 @@
   --border: #E5E5E3;
 }
 
+/* ── Skip to main content link ── */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.25rem;
+  z-index: 9999;
+  background: var(--purple);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+/* ── Base ── */
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
+  margin: 0;
 }
 
-h1, h2, h3, .site-title {
+/* ── Typography ── */
+h1, h2, h3 {
   font-family: 'Cormorant Garamond', serif;
   color: var(--purple);
   font-weight: 600;
 }
 
+/* ── Focus styles (WCAG 2.4.7) ── */
+:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 1px;
+  border-color: var(--purple);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── Links ── */
 a {
   color: var(--purple);
 }
@@ -29,9 +85,11 @@ a:hover {
   color: var(--gold);
 }
 
+/* ── Logo ── */
 .logo-mark {
   width: 40px;
   height: 40px;
+  display: block;
 }
 
 .logo-animate {
@@ -53,32 +111,39 @@ a:hover {
   }
 }
 
-.site-header {
-  border-bottom: 1px solid var(--border);
+/* Pause animation for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .logo-animate {
+    animation: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
+/* ── Footer ── */
 .site-footer {
   border-top: 1px solid var(--border);
   font-size: 0.85em;
-  color: #666;
+  color: #555;
 }
 
-.hero {
-  background: var(--purple);
-  color: #fff;
-  padding: 6rem 2rem;
-  text-align: center;
+.site-footer a {
+  color: #555;
+}
+.site-footer a:hover {
+  color: var(--purple);
 }
 
-.hero h1 {
-  color: #fff;
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-.hero p {
-  color: rgba(255,255,255,0.85);
-  font-size: 1.1rem;
-  margin-top: 1rem;
+/* ── Ensure 200% zoom doesn't break ── */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  section[style*="padding: 5rem"] {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }

@@ -5,3 +5,81 @@
 {{- if .Params.redirect }}
 <meta http-equiv="refresh" content="{{ .Params.redirectDelay | default 3 }};url={{ .Params.redirect }}">
 {{ end }}
+
+<script>
+(function () {
+  'use strict';
+
+  const KEY = 'a11y-settings';
+
+  function loadSettings() {
+    try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
+  }
+  function saveSettings(s) {
+    try { localStorage.setItem(KEY, JSON.stringify(s)); } catch(e){}
+  }
+
+  function applyFontSize(size) {
+    // size: number 80-140
+    document.documentElement.style.fontSize = size + '%';
+  }
+
+  function applyContrast(on) {
+    if (on) {
+      document.body.classList.add('high-contrast');
+    } else {
+      document.body.classList.remove('high-contrast');
+    }
+  }
+
+  function init() {
+    const s = loadSettings();
+    if (s.fontSize) applyFontSize(s.fontSize);
+    if (s.highContrast) applyContrast(true);
+
+    const btnDec = document.getElementById('a11y-font-decrease');
+    const btnInc = document.getElementById('a11y-font-increase');
+    const btnReset = document.getElementById('a11y-font-reset');
+    const btnContrast = document.getElementById('a11y-contrast-toggle');
+
+    if (btnDec) {
+      btnDec.addEventListener('click', function () {
+        const s = loadSettings();
+        s.fontSize = Math.max(80, (s.fontSize || 100) - 10);
+        saveSettings(s);
+        applyFontSize(s.fontSize);
+      });
+    }
+    if (btnInc) {
+      btnInc.addEventListener('click', function () {
+        const s = loadSettings();
+        s.fontSize = Math.min(140, (s.fontSize || 100) + 10);
+        saveSettings(s);
+        applyFontSize(s.fontSize);
+      });
+    }
+    if (btnReset) {
+      btnReset.addEventListener('click', function () {
+        const s = loadSettings();
+        s.fontSize = 100;
+        saveSettings(s);
+        applyFontSize(100);
+      });
+    }
+    if (btnContrast) {
+      btnContrast.addEventListener('click', function () {
+        const s = loadSettings();
+        s.highContrast = !s.highContrast;
+        saveSettings(s);
+        applyContrast(s.highContrast);
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>

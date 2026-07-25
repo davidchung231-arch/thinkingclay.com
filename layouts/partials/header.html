@@ -10,12 +10,12 @@
     </div>
 
     <nav aria-label="Primary navigation">
-      {{ if or (eq .RelPermalink "/") (hasPrefix .RelPermalink "/attorney") }}
-        {{ if hasPrefix .RelPermalink "/attorney" }}
-          <a href="/attorney/" style="font-family:'Inter',sans-serif;color:#2D1B69;font-size:0.85rem;text-decoration:none;letter-spacing:0.05em;border-bottom:1px solid #2D1B69;padding-bottom:2px;">Home</a>
-        {{ else }}
-          <a href="/about/" style="font-family:'Inter',sans-serif;color:#2D1B69;font-size:0.85rem;text-decoration:none;letter-spacing:0.05em;border-bottom:1px solid #2D1B69;padding-bottom:2px;">About</a>
-        {{ end }}
+      {{ if eq .RelPermalink "/" }}
+        <a href="/about/" style="font-family:'Inter',sans-serif;color:#2D1B69;font-size:0.85rem;text-decoration:none;letter-spacing:0.05em;border-bottom:1px solid #2D1B69;padding-bottom:2px;">About</a>
+      {{ else if eq .RelPermalink "/kr/" }}
+        <a href="/kr/" style="font-family:'Inter',sans-serif;color:#2D1B69;font-size:0.85rem;text-decoration:none;letter-spacing:0.05em;border-bottom:1px solid #2D1B69;padding-bottom:2px;">Home</a>
+      {{ else if hasPrefix .RelPermalink "/attorney" }}
+        <a href="/attorney/" style="font-family:'Inter',sans-serif;color:#2D1B69;font-size:0.85rem;text-decoration:none;letter-spacing:0.05em;border-bottom:1px solid #2D1B69;padding-bottom:2px;">Home</a>
       {{ else }}
         <a href="/" style="font-family:'Inter',sans-serif;color:#2D1B69;font-size:0.85rem;text-decoration:none;letter-spacing:0.05em;border-bottom:1px solid #2D1B69;padding-bottom:2px;">Home</a>
       {{ end }}

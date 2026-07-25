@@ -63,10 +63,9 @@ We will not discriminate against you for exercising any of your privacy rights. 
 
 ### How to Exercise Your Rights
 
-To submit a request under the CCPA/CPRA, contact us at:
+For privacy-related questions or requests, contact us at:
 
-**Email:** hello@thinkingclay.com  
-**Mailing Address:** Thinking Clay LLC, 12 Main St., Princeton, NJ 08540
+**Email:** hello@thinkingclay.com
 
 We will respond to your request within **45 calendar days** of receipt. If we need additional time, we will notify you of the extension.
 

@@ -182,3 +182,270 @@ body.high-contrast .site-footer {
     padding-right: 1rem !important;
   }
 }
+
+/* ── Attorney pages ── */
+.attorney-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(3.5rem, 8vw, 6rem) 2rem 3rem;
+  line-height: 1.8;
+}
+
+.attorney-hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.attorney-hero h1,
+.attorney-contact-intro h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  line-height: 1.15;
+}
+
+.attorney-eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--purple);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.attorney-content {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.attorney-content h2,
+.attorney-contact-form h2 {
+  margin: 2.5rem 0 0.75rem;
+  font-size: 1.8rem;
+  line-height: 1.25;
+}
+
+.attorney-content ul {
+  padding-left: 1.5rem;
+}
+
+.attorney-content li {
+  margin: 0.35rem 0;
+}
+
+.attorney-cta {
+  margin: 2.5rem 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.attorney-cta a {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  color: #fff;
+  background: var(--purple);
+  text-decoration: none;
+}
+
+.attorney-cta a:hover {
+  color: #fff;
+  background: #40278f;
+}
+
+.attorney-signature {
+  margin-top: 2rem;
+  color: var(--purple);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.attorney-signature span {
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.attorney-jurisdiction,
+.attorney-entity {
+  margin-top: 1.25rem;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.attorney-disclosure {
+  max-width: 650px;
+  margin: 3rem auto 0;
+  padding-top: 2rem;
+  color: #444;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  border-top: 1px solid var(--border);
+}
+
+.attorney-contact-page {
+  text-align: center;
+}
+
+.attorney-contact-intro {
+  max-width: 540px;
+  margin: 0 auto 2.5rem;
+}
+
+.attorney-contact-intro p {
+  margin: 1rem auto 0;
+}
+
+.attorney-contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.attorney-contact-form h2 {
+  margin-top: 0;
+}
+
+.attorney-form-note {
+  margin: 0 0 1.5rem;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.attorney-contact-form label {
+  display: block;
+  margin: 1rem 0 0.35rem;
+  font-weight: 600;
+}
+
+.attorney-contact-form input,
+.attorney-contact-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #777;
+  border-radius: 2px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+}
+
+.attorney-contact-form textarea {
+  resize: vertical;
+}
+
+.attorney-contact-form button,
+.attorney-success button,
+.attorney-error button {
+  min-height: 44px;
+  margin-top: 1.25rem;
+  padding: 0.65rem 1.4rem;
+  border: 1px solid var(--purple);
+  border-radius: 2px;
+  background: var(--purple);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.attorney-success a,
+.attorney-error a {
+  display: inline-block;
+  min-height: 44px;
+  margin-top: 1.25rem;
+  padding: 0.65rem 1.4rem;
+  box-sizing: border-box;
+  border: 1px solid var(--purple);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--purple);
+  font: inherit;
+  text-decoration: none;
+}
+
+.attorney-contact-form button:hover,
+.attorney-success button:hover,
+.attorney-error button:hover,
+.attorney-success a:hover,
+.attorney-error a:hover {
+  background: #40278f;
+  color: #fff;
+}
+
+.attorney-success,
+.attorney-error {
+  max-width: 500px;
+  margin: 2.5rem auto 0;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.attorney-success {
+  background: #f5f5f3;
+  border-left: 3px solid var(--purple);
+}
+
+.attorney-error {
+  background: #fdf2f2;
+  border-left: 3px solid #a51c30;
+}
+
+.attorney-success p:first-child,
+.attorney-error p:first-child {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.attorney-success p:nth-child(2),
+.attorney-error p:nth-child(2) {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.attorney-error p:first-child {
+  color: #a51c30;
+}
+
+.attorney-contact-details {
+  color: #444;
+  font-size: 0.9rem;
+}
+
+body.high-contrast .attorney-cta a {
+  background: #fff;
+  color: #000 !important;
+  border: 2px solid #fff;
+}
+
+body.high-contrast .attorney-success a,
+body.high-contrast .attorney-error a {
+  background: #fff;
+  color: #000 !important;
+  border-color: #fff;
+}
+
+body.high-contrast .attorney-disclosure,
+body.high-contrast .attorney-form-note,
+body.high-contrast .attorney-signature span,
+body.high-contrast .attorney-contact-details,
+body.high-contrast .attorney-success p,
+body.high-contrast .attorney-error p {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .attorney-page {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .attorney-hero h1,
+  .attorney-contact-intro h1 {
+    font-size: 2.35rem;
+  }
+
+  .attorney-cta a,
+  .attorney-contact-form button {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}

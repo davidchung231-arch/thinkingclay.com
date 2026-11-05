@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "en" }}">
+<head>
+  {{- partial "head.html" . -}}
+</head>
+<body>
+  {{- partial "header.html" . -}}
+  <main id="main-content">
+    <article class="attorney-page">
+      <header class="attorney-hero">
+        <p class="attorney-eyebrow">Practical legal guidance on New York law, commercial agreements, and cross-border business transactions.</p>
+        <h1>Business Counsel for Commercial Decisions</h1>
+      </header>
+
+      <div class="attorney-content">
+        {{ .Content }}
+      </div>
+
+      <div class="attorney-disclosure">
+        <p><strong>Attorney Advertising.</strong> The information contained on this website is provided for general informational purposes only and does not constitute legal advice. Viewing this website, contacting or communicating with David S. Chung does not create an attorney-client relationship. An attorney-client relationship is established only through a written engagement agreement. Please do not submit confidential or time-sensitive information through this website until an attorney-client relationship has been established. Prior results do not guarantee a similar outcome.</p>
+      </div>
+    </article>
+  </main>
+
+{{- partial "footer.html" . -}}
+</body>
+</html>

@@ -8,32 +8,45 @@
   <main id="main-content">
     <section class="attorney-page attorney-contact-page">
       <div class="attorney-contact-intro">
+        <p class="attorney-eyebrow">A considered first step</p>
         {{ .Content }}
       </div>
 
-      <form id="attorney-contact-form" action="https://formspree.io/f/mkodwylo" method="POST" class="attorney-contact-form" aria-labelledby="attorney-contact-form-title">
-        <h2 id="attorney-contact-form-title">Tell me a little more</h2>
-        <p class="attorney-form-note" id="attorney-form-note">Please do not include confidential or time-sensitive information, documents, opposing-party names, deadlines, or detailed facts. Submitting this form does not create an attorney-client relationship or mean that David S. Chung, Esq. has agreed to represent you.</p>
+      <div class="attorney-contact-grid">
+        <div class="attorney-contact-aside attorney-reveal">
+          <p class="attorney-section-label">Before you send</p>
+          <h2 id="attorney-contact-form-title">Tell me a little more</h2>
+          <p class="attorney-contact-aside-copy">A short description of the business context and the decision in front of you is enough to begin.</p>
+          <p class="attorney-form-note" id="attorney-form-note"><strong>Please do not include confidential or time-sensitive information.</strong> Do not send documents, opposing-party names, deadlines, or detailed facts. Submitting this form does not create an attorney-client relationship or mean that David S. Chung, Esq. has agreed to represent you.</p>
+        </div>
 
-        <label for="attorney-name">Name</label>
-        <input type="text" id="attorney-name" name="name" autocomplete="name" required>
+        <form id="attorney-contact-form" action="https://formspree.io/f/mkodwylo" method="POST" class="attorney-contact-form attorney-reveal" aria-labelledby="attorney-contact-form-title">
+          <div class="attorney-form-field">
+            <label for="attorney-name">Name</label>
+            <input type="text" id="attorney-name" name="name" autocomplete="name" required>
+          </div>
 
-        <label for="attorney-email">Email</label>
-        <input type="email" id="attorney-email" name="email" autocomplete="email" required>
+          <div class="attorney-form-field">
+            <label for="attorney-email">Email</label>
+            <input type="email" id="attorney-email" name="email" autocomplete="email" required>
+          </div>
 
-        <label for="attorney-message">Message</label>
-        <textarea id="attorney-message" name="message" rows="6" required aria-describedby="attorney-form-note"></textarea>
+          <div class="attorney-form-field">
+            <label for="attorney-message">Message</label>
+            <textarea id="attorney-message" name="message" rows="7" required aria-describedby="attorney-form-note"></textarea>
+          </div>
 
-        <button type="submit">Send message</button>
-      </form>
+          <button type="submit" class="attorney-button">Send message <span aria-hidden="true">↗</span></button>
+        </form>
+      </div>
 
       <div id="attorney-success" class="attorney-success" style="display: none;" role="status" aria-live="polite">
         <p>One Step Closer to Clarity.</p>
         <p>
           Thank you for contacting David S. Chung, Esq. Your message has been received. Submission does not create an attorney-client relationship or mean that the matter will be accepted.
         </p>
-        <a href="/attorney/">Back to Attorney</a>
-        <button onclick="resetAttorneyForm()">Send another message</button>
+        <a href="/attorney/" class="attorney-button attorney-button-secondary">Back to Attorney</a>
+        <button onclick="resetAttorneyForm()" class="attorney-button attorney-button-secondary">Send another message</button>
       </div>
 
       <div id="attorney-error" class="attorney-error" style="display: none;" role="alert" aria-live="assertive">
@@ -41,16 +54,22 @@
         <p>
           Please try again or email us directly at <a href="mailto:attorney@thinkingclay.com" style="color: #2D1B69;">attorney@thinkingclay.com</a>.
         </p>
-        <a href="/attorney/">Back to Attorney</a>
+        <a href="/attorney/" class="attorney-button attorney-button-secondary">Back to Attorney</a>
+      </div>
+
+      <div class="attorney-contact-legal attorney-reveal">
+        <div>
+          <p class="attorney-section-label">Important information</p>
+          <p class="attorney-jurisdiction">David S. Chung, Esq. is admitted to practice law in New York and is not admitted to practice law in New Jersey. Legal services are provided only where authorized by applicable law and professional conduct rules.</p>
+          <p class="attorney-entity">Legal services are provided separately by David S. Chung, Esq. Thinking Clay LLC provides business advisory services and does not provide legal services.</p>
+        </div>
+        <p class="attorney-contact-details">David S. Chung, Esq. · Attorney Admitted in New York · <a href="mailto:attorney@thinkingclay.com">attorney@thinkingclay.com</a></p>
       </div>
 
       <div class="attorney-disclosure">
         <p><strong>Attorney Advertising.</strong> The information contained on this website is provided for general informational purposes only and does not constitute legal advice. Viewing this website, contacting or communicating with David S. Chung does not create an attorney-client relationship. An attorney-client relationship is established only through a written engagement agreement. Please do not submit confidential or time-sensitive information through this website until an attorney-client relationship has been established. Prior results do not guarantee a similar outcome.</p>
       </div>
 
-      <p class="attorney-contact-details">
-        David S. Chung, Esq. | Attorney Admitted in New York | <a href="mailto:attorney@thinkingclay.com">attorney@thinkingclay.com</a>
-      </p>
     </section>
   </main>
 
@@ -86,14 +105,14 @@
         form.style.display = 'none';
         successEl.style.display = 'block';
         form.reset();
-        const firstBtn = successEl.querySelector('button');
-        if (firstBtn) firstBtn.focus();
+        const firstAction = successEl.querySelector('a, button');
+        if (firstAction) firstAction.focus();
       })
       .catch(function () {
         form.style.display = 'none';
         errorEl.style.display = 'block';
-        const firstBtn = errorEl.querySelector('button');
-        if (firstBtn) firstBtn.focus();
+        const firstAction = errorEl.querySelector('a, button');
+        if (firstAction) firstAction.focus();
       })
       .finally(function () {
         btn.disabled = false;
@@ -109,6 +128,7 @@
     }
   </script>
 
+{{- partial "attorney-motion.html" . -}}
 {{- partial "footer.html" . -}}
 
 </body>

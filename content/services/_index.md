@@ -8,15 +8,15 @@ description: "Business support, communication, coordination, and practical AI pr
 
 ## U.S. Market Entry & Business Support
 
-Practical business coordination and operational support for businesses entering or operating in the United States.
+For businesses entering or operating in the United States, we help identify operational tasks, organize information, and coordinate with service providers. Depending on the agreed scope, you can expect a task list, organized materials, and follow-up coordination. [Tell us about your needs](/contact/).
 
 ## Business Communication & Coordination
 
-Helping Korean-speaking clients communicate effectively with U.S. professionals, organize information, prepare for meetings, and coordinate business-related matters.
+For clients working with U.S. professionals, we help prepare meeting agendas and questions, organize documents, and track follow-up. Deliverables can include a meeting brief, question list, and action-item summary. [Discuss your project](/contact/).
 
 ## AI & Business Process Improvement
 
-Helping businesses improve workflows, reduce repetitive tasks, and use practical AI tools.
+For teams facing repetitive work, we review a workflow and discuss practical uses of AI tools. Depending on the engagement, we can provide a workflow outline and suggested next steps for testing improvements. [Ask about workflow support](/contact/).
 
 ### Separate legal practice
 

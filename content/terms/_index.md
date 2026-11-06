@@ -41,3 +41,5 @@ We reserve the right to modify these Terms of Use at any time. Continued use of 
 Questions regarding these Terms of Use should be directed to:
 
 **Email:** hello@thinkingclay.com
+
+**Mailing Address:** Thinking Clay LLC, 4599 Route 27, Unit 184, Kingston, NJ 08528-9998, United States

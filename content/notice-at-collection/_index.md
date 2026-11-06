@@ -67,6 +67,8 @@ For privacy-related questions or requests, contact us at:
 
 **Email:** hello@thinkingclay.com
 
+**Mailing Address:** Thinking Clay LLC, 4599 Route 27, Unit 184, Kingston, NJ 08528-9998, United States
+
 We will respond to your request within **45 calendar days** of receipt. If we need additional time, we will notify you of the extension.
 
 ### Authorized Agents

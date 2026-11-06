@@ -4,5 +4,5 @@ date: 2026-01-01
 draft: false
 layout: ko-home
 pageLanguage: ko
-description: "미국에서 사업을 운영하거나 확장하는 한국어권 기업을 위한 실무형 비법률 비즈니스 지원."
+description: "미국 사업을 위한 전문가 소통, 회의 준비, 자료 정리와 업무 조율 지원."
 ---

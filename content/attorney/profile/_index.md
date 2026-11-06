@@ -6,7 +6,9 @@ draft: false
 layout: attorney-page
 ---
 
-<p class="attorney-lead">David S. Chung is a New York-admitted attorney with experience in corporate legal departments, commercial contracting, regulatory compliance, and cross-border business transactions.</p>
+<h2 class="attorney-profile-intro-heading">LEGAL EXPERIENCE. PRACTICAL PERSPECTIVE.</h2>
+
+<p>David S. Chung is a New York-admitted attorney with experience in corporate legal departments, commercial contracting, regulatory compliance, and cross-border business transactions.</p>
 
 <p>His approach draws on both legal and business experience, with an emphasis on clear communication, practical judgment, and cost-conscious solutions.</p>
 

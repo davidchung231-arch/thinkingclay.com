@@ -6,9 +6,9 @@ draft: false
 layout: attorney-page
 ---
 
-<p class="attorney-lead">David S. Chung, Esq. combines legal training with a technology background and experience across business environments.</p>
+<p class="attorney-lead">David S. Chung is a New York-admitted attorney with experience in corporate legal departments, commercial contracting, regulatory compliance, and cross-border business transactions.</p>
 
-<p>His work is grounded in practical communication between lawyers and business professionals: understanding the commercial objective, identifying the legal questions that matter, and explaining the path forward clearly.</p>
+<p>His approach draws on both legal and business experience, with an emphasis on clear communication, practical judgment, and cost-conscious solutions.</p>
 
 <section class="attorney-profile-section" aria-labelledby="attorney-education-heading">
   <p class="attorney-kicker">Education</p>
@@ -18,19 +18,6 @@ layout: attorney-page
     <div><dt>Yonsei University Graduate School of Law</dt><dd>LL.M., Intellectual Property Law, 2006</dd></div>
     <div><dt>University of Massachusetts Boston</dt><dd>Bachelor's Degree, Computer Science, 2002</dd></div>
   </dl>
-</section>
-
-<section class="attorney-profile-section" aria-labelledby="attorney-experience-heading">
-  <p class="attorney-kicker">Professional experience</p>
-  <h2 id="attorney-experience-heading">Business and legal perspective</h2>
-  <p>Relevant professional experience includes work with:</p>
-  <ul class="attorney-experience-list">
-    <li>Kiss Products</li>
-    <li>CJ Olive Young</li>
-    <li>Celltrion</li>
-    <li>United Merchant Services</li>
-    <li>Shin &amp; Kim</li>
-  </ul>
 </section>
 
 <section class="attorney-page-note" aria-labelledby="attorney-profile-limits-heading">

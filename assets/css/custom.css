@@ -347,11 +347,12 @@ body.attorney-site .attorney-hero h1 {
   margin: 0;
   color: var(--attorney-charcoal);
   font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
-  font-size: clamp(3.1rem, 8vw, 7.2rem);
+  font-size: clamp(3rem, 7vw, 6.2rem);
   font-weight: 400;
-  letter-spacing: 0.035em;
-  line-height: 0.95;
+  letter-spacing: 0.02em;
+  line-height: 1;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .attorney-name-pulse {
@@ -391,15 +392,15 @@ body.attorney-site .attorney-hero h1 {
 .attorney-hero-jurisdictions {
   margin: 1.45rem 0 0;
   color: var(--attorney-muted);
-  font-size: clamp(0.85rem, 1.5vw, 1rem);
-  letter-spacing: 0.18em;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  letter-spacing: 0.13em;
   line-height: 1.6;
   text-transform: uppercase;
 }
 
 .attorney-hero-admission {
   color: var(--attorney-muted);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .attorney-hero-divider {
@@ -544,7 +545,7 @@ body.attorney-site .attorney-button span {
 .attorney-home-identity p {
   max-width: 760px;
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .attorney-interior-heading {
@@ -790,7 +791,7 @@ body.attorney-site .attorney-disclosure {
   padding-top: 2rem;
   border-top: 1px solid var(--attorney-line);
   color: var(--attorney-muted);
-  font-size: 0.88rem;
+  font-size: 1rem;
   line-height: 1.65;
 }
 
@@ -914,6 +915,10 @@ body.attorney-site.attorney-motion-ready .attorney-reveal.is-visible {
     min-height: 680px;
     margin: -4rem -1rem 0;
     padding: 5rem 1rem;
+  }
+
+  body.attorney-site .attorney-hero h1 {
+    white-space: normal;
   }
 
   .attorney-contact-intro {

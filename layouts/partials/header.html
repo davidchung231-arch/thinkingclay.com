@@ -1,18 +1,32 @@
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <header class="tc-site-header">
   <div class="tc-header-inner">
-    <a class="tc-brand" href="/" aria-label="Thinking Clay LLC home">
+    {{ $isKo := eq (.Params.pageLanguage | default "en") "ko" }}
+    {{ $pathPrefix := "" }}
+    {{ $homeLabel := "Thinking Clay LLC home" }}
+    {{ $servicesLabel := "Services" }}
+    {{ $aboutLabel := "About" }}
+    {{ $resourcesLabel := "Resources" }}
+    {{ $contactLabel := "Contact" }}
+    {{ if $isKo }}
+      {{ $pathPrefix = "/ko" }}
+      {{ $homeLabel = "Thinking Clay LLC 홈" }}
+      {{ $servicesLabel = "서비스" }}
+      {{ $aboutLabel = "소개" }}
+      {{ $resourcesLabel = "자료" }}
+      {{ $contactLabel = "문의" }}
+    {{ end }}
+    <a class="tc-brand" href="{{ if $isKo }}/ko/{{ else }}/{{ end }}" aria-label="{{ $homeLabel }}">
       <img src="/images/logo.svg" alt="" width="42" height="42">
       <span>Thinking Clay LLC</span>
     </a>
     <nav class="tc-primary-nav" aria-label="Primary navigation">
-      <a href="/services/"{{ if hasPrefix .RelPermalink "/services" }} aria-current="page"{{ end }}>Services</a>
-      <a href="/about/"{{ if hasPrefix .RelPermalink "/about" }} aria-current="page"{{ end }}>About</a>
-      <a href="/resources/"{{ if hasPrefix .RelPermalink "/resources" }} aria-current="page"{{ end }}>Resources</a>
+      <a href="{{ $pathPrefix }}/services/"{{ if hasPrefix .RelPermalink (printf "%s/services" $pathPrefix) }} aria-current="page"{{ end }}>{{ $servicesLabel }}</a>
+      <a href="{{ $pathPrefix }}/about/"{{ if hasPrefix .RelPermalink (printf "%s/about" $pathPrefix) }} aria-current="page"{{ end }}>{{ $aboutLabel }}</a>
+      <a href="{{ $pathPrefix }}/resources/"{{ if hasPrefix .RelPermalink (printf "%s/resources" $pathPrefix) }} aria-current="page"{{ end }}>{{ $resourcesLabel }}</a>
       <a href="/attorney/">Attorney <span aria-hidden="true">↗</span></a>
-      <a href="/contact/"{{ if hasPrefix .RelPermalink "/contact" }} aria-current="page"{{ end }}>Contact</a>
+      <a href="{{ $pathPrefix }}/contact/"{{ if hasPrefix .RelPermalink (printf "%s/contact" $pathPrefix) }} aria-current="page"{{ end }}>{{ $contactLabel }}</a>
     </nav>
-    {{ $isKo := eq (.Params.pageLanguage | default "en") "ko" }}
     {{ $enPath := .RelPermalink }}
     {{ $koPath := "/ko/" }}
     {{ if $isKo }}

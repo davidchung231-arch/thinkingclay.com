@@ -13,18 +13,16 @@
       {{ $homeLabel = "Thinking Clay LLC 홈" }}
       {{ $servicesLabel = "서비스" }}
       {{ $aboutLabel = "소개" }}
-      {{ $resourcesLabel = "자료" }}
-      {{ $contactLabel = "문의" }}
+      {{ $resourcesLabel = "자료실" }}
+      {{ $contactLabel = "문의하기" }}
     {{ end }}
     <a class="tc-brand" href="{{ if $isKo }}/ko/{{ else }}/{{ end }}" aria-label="{{ $homeLabel }}">
-      <img src="/images/logo.svg" alt="" width="42" height="42">
-      <span>Thinking Clay LLC</span>
+      <span class="tc-brand-wordmark">Thinking Clay <span>LLC</span></span>
     </a>
     <nav class="tc-primary-nav" aria-label="Primary navigation">
       <a href="{{ $pathPrefix }}/services/"{{ if hasPrefix .RelPermalink (printf "%s/services" $pathPrefix) }} aria-current="page"{{ end }}>{{ $servicesLabel }}</a>
       <a href="{{ $pathPrefix }}/about/"{{ if hasPrefix .RelPermalink (printf "%s/about" $pathPrefix) }} aria-current="page"{{ end }}>{{ $aboutLabel }}</a>
       <a href="{{ $pathPrefix }}/resources/"{{ if hasPrefix .RelPermalink (printf "%s/resources" $pathPrefix) }} aria-current="page"{{ end }}>{{ $resourcesLabel }}</a>
-      <a href="/attorney/">Attorney <span aria-hidden="true">↗</span></a>
       <a href="{{ $pathPrefix }}/contact/"{{ if hasPrefix .RelPermalink (printf "%s/contact" $pathPrefix) }} aria-current="page"{{ end }}>{{ $contactLabel }}</a>
     </nav>
     {{ $enPath := .RelPermalink }}
@@ -38,9 +36,11 @@
     {{ else if hasPrefix .RelPermalink "/resources" }}{{ $koPath = "/ko/resources/" }}
     {{ else if hasPrefix .RelPermalink "/contact" }}{{ $koPath = "/ko/contact/" }}{{ end }}
     <div class="tc-header-tools">
-      <a href="{{ $enPath }}"{{ if not $isKo }} aria-current="page"{{ end }}>EN</a>
+      <div class="tc-language-switch" aria-label="Language switcher">
+        <a href="{{ $enPath }}"{{ if not $isKo }} aria-current="page"{{ end }}>EN</a>
       <span aria-hidden="true">|</span>
-      <a href="{{ $koPath }}" lang="ko"{{ if $isKo }} aria-current="page"{{ end }}>KR</a>
+        <a href="{{ $koPath }}" lang="ko"{{ if $isKo }} aria-current="page"{{ end }}>KR</a>
+      </div>
       <div class="a11y-controls" aria-label="Accessibility controls">
         <button class="a11y-control" id="a11y-font-decrease" aria-label="A−: Decrease text size" title="Decrease text size">A−</button>
         <button class="a11y-control" id="a11y-font-reset" aria-label="A: Reset text size" title="Reset text size">A</button>

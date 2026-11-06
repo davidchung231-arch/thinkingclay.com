@@ -1,5 +1,9 @@
 {{- $css := resources.Get "css/custom.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{ if not (hasPrefix .RelPermalink "/attorney") }}
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@1.3.9/dist/web/static/pretendard.css">
+{{ end }}
 <title>{{ with .Title }}{{ . }} | {{ end }}Thinking Clay</title>
 {{ if not (hasPrefix .RelPermalink "/attorney") }}
   <meta name="description" content="{{ .Description | default .Site.Params.description }}">

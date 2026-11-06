@@ -11,9 +11,7 @@ draft: false
 </div>
 
 <div style="text-align: center; padding: 2rem 0;">
-  <a href="/kr/contact/">
-    <img src="/images/logo.svg" alt="Thinking Clay logo" class="logo-mark logo-animate" width="80" height="80">
-  </a>
+  <a href="/kr/contact/" class="tc-legacy-wordmark">Thinking Clay <span>LLC</span></a>
 </div>
 
 <div style="text-align: center; padding-top: 1rem;">

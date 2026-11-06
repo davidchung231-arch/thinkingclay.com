@@ -3,7 +3,7 @@
 <head>
   {{- partial "head.html" . -}}
 </head>
-<body>
+<body class="tc-site tc-interior">
   {{- partial "header.html" . -}}
   <main id="main-content">
     <section style="max-width: 1100px; margin: 0 auto; padding: 5rem 2rem 3rem 2rem; text-align: center;">
@@ -12,10 +12,8 @@
         {{ .Content }}
       </div>
 
-      <div style="text-align: center; padding: 3rem 0 2rem 0;">
-        <a href="/attorney/contact" aria-label="Contact Attorney">
-          <img src="/images/logo.svg" alt="Thinking Clay logo" class="logo-mark logo-animate" width="80" height="80">
-        </a>
+      <div class="tc-legal-attorney-link-wrap">
+        <a href="/attorney/contact" class="tc-legal-attorney-link">Independent Attorney Services — David S. Chung, Esq. <span aria-hidden="true">↗</span></a>
       </div>
 
       <div style="max-width: 650px; margin: 0 auto; padding: 2rem 0; text-align: left; color: #444; font-size: 0.9rem; line-height: 1.8;">

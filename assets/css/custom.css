@@ -1157,32 +1157,49 @@ body.tc-site .tc-site-header {
   align-items: center;
   gap: 0.75rem;
   color: var(--tc-charcoal) !important;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.13em;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
-.tc-brand img { width: 34px; height: 34px; }
+.tc-brand-wordmark { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.35rem; font-weight: 600; letter-spacing: 0.015em; line-height: 1; white-space: nowrap; }
+.tc-brand-wordmark span { color: #7A5C2E; font-family: Inter, Arial, sans-serif; font-size: 0.58em; font-weight: 600; letter-spacing: 0.12em; margin-left: 0.16em; text-decoration: underline; text-decoration-color: #C6A365; text-decoration-thickness: 1px; text-underline-offset: 0.22em; vertical-align: 0.16em; }
 .tc-primary-nav { display: flex; justify-content: center; gap: clamp(1rem, 2.5vw, 2.35rem); }
 .tc-primary-nav a,
-.tc-header-tools > a {
+.tc-header-tools a {
   color: var(--tc-muted) !important;
-  font-size: 0.76rem;
-  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .tc-primary-nav a:hover,
 .tc-primary-nav a[aria-current="page"],
-.tc-header-tools > a:hover { color: var(--tc-charcoal) !important; }
+.tc-header-tools a:hover,
+.tc-header-tools a[aria-current="page"] { color: var(--tc-charcoal) !important; }
 .tc-primary-nav a[aria-current="page"] { border-bottom: 1px solid var(--tc-charcoal); }
 .tc-header-tools { display: flex; align-items: center; gap: 0.45rem; color: var(--tc-muted); white-space: nowrap; }
+.tc-language-switch { display: inline-flex; align-items: center; gap: 0.42rem; }
+.tc-language-switch a { padding: 0.25rem 0.1rem; }
+.tc-language-switch a[aria-current="page"] { color: var(--tc-charcoal) !important; font-weight: 600; }
 .tc-header-tools .a11y-controls { display: flex; gap: 0.25rem; margin-left: 0.8rem; }
 body.tc-site .a11y-control { min-width: 2.25rem; min-height: 2.25rem; padding: 0.25rem !important; border: 1px solid var(--tc-line); border-radius: 0; background: transparent; color: var(--tc-charcoal); font-size: 0.68rem; font-weight: 600; cursor: pointer; }
 body.tc-site .a11y-control:hover { background: var(--tc-charcoal); color: var(--tc-surface); }
+
+body.tc-korean-page { font-family: Pretendard, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; }
+body.tc-korean-page h1,
+body.tc-korean-page h2,
+body.tc-korean-page h3 { font-family: Pretendard, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; font-weight: 600; letter-spacing: -0.04em; }
+body.tc-korean-page p,
+body.tc-korean-page li,
+body.tc-korean-page dd,
+body.tc-korean-page dt { line-height: 1.85; }
+body.tc-korean-page .tc-primary-nav a,
+body.tc-korean-page .tc-header-tools a { font-family: Pretendard, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; font-size: 0.82rem; letter-spacing: -0.02em; }
+body.tc-korean-page .tc-brand-wordmark { font-family: 'Cormorant Garamond', Georgia, serif; letter-spacing: 0.01em; }
 
 .tc-hero {
   position: relative;
@@ -1299,8 +1316,16 @@ body:not(.attorney-site) .tc-footer-grid p { max-width: 19rem; margin: 0.9rem 0 
 body:not(.attorney-site) .tc-footer-grid nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.75rem 1.5rem; align-content: start; }
 body:not(.attorney-site) .tc-footer-grid nav a { color: var(--tc-muted); font-size: 0.78rem; text-decoration: none; }
 body:not(.attorney-site) .tc-footer-grid nav a:hover { color: var(--tc-charcoal); }
+body:not(.attorney-site) .tc-footer-attorney { margin: 1.5rem 0 0; font-size: 0.86rem; }
+body:not(.attorney-site) .tc-footer-attorney a { color: var(--tc-charcoal); font-weight: 600; text-decoration: none; }
+body:not(.attorney-site) .tc-footer-attorney a:hover { color: #8A6B36; }
 body:not(.attorney-site) .tc-footer-entity { max-width: 760px; margin: 1.5rem 0 0; color: var(--tc-muted); font-size: 0.78rem; line-height: 1.6; }
 body:not(.attorney-site) .tc-footer-copyright { margin: 1.5rem 0 0; color: var(--tc-muted); font-size: 0.75rem; }
+.tc-legacy-wordmark { color: var(--tc-charcoal, #242A31); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.7rem; font-weight: 600; text-decoration: none; }
+.tc-legacy-wordmark span { color: #7A5C2E; font-family: Inter, Arial, sans-serif; font-size: 0.56em; letter-spacing: 0.12em; text-decoration: underline; text-decoration-color: #C6A365; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+body.tc-site .tc-legal-attorney-link-wrap { padding: 3rem 0 2rem; text-align: center; }
+body.tc-site .tc-legal-attorney-link { color: var(--tc-charcoal); font-weight: 600; text-decoration: none; }
+body.tc-site .tc-legal-attorney-link:hover { color: #7A5C2E; }
 
 body.tc-site.high-contrast { --tc-ivory: #000; --tc-charcoal: #fff; --tc-muted: #fff; --tc-line: #fff; --tc-surface: #000; background: #000; color: #fff; }
 body.tc-site.high-contrast .tc-site-header, body.tc-site.high-contrast .tc-service-card, body.tc-site.high-contrast .tc-contact-form, body.tc-site.high-contrast .tc-form-feedback { background: #000; color: #fff; }
@@ -1320,11 +1345,11 @@ body.tc-site.high-contrast a, body.tc-site.high-contrast h1, body.tc-site.high-c
 @media (max-width: 560px) {
   .tc-header-inner, .tc-section, .tc-page-hero, .tc-reading-section, .tc-contact-layout, .tc-ko-section, .tc-ko-hero { padding-right: 1.1rem; padding-left: 1.1rem; }
   .tc-header-inner { min-height: 70px; }
-  .tc-brand { font-size: 0.72rem; letter-spacing: 0.08em; }
-  .tc-brand img { width: 29px; height: 29px; }
+  .tc-brand { font-size: 0.8rem; }
+  .tc-brand-wordmark { font-size: 1.15rem; }
   .tc-header-tools .a11y-controls { display: none; }
   .tc-primary-nav { justify-content: space-between; gap: 0.55rem; overflow: visible; }
-  .tc-primary-nav a, .tc-header-tools > a { font-size: 0.68rem; letter-spacing: 0.08em; }
+  .tc-primary-nav a, .tc-header-tools a { font-size: 0.72rem; letter-spacing: 0.04em; }
   .tc-hero-content { padding: 5rem 1.1rem 8rem; }
   .tc-hero-content h1 { font-size: clamp(3.6rem, 18vw, 5.6rem); }
   .tc-hero-controls { right: 1.1rem; bottom: 1.25rem; left: 1.1rem; }

@@ -303,6 +303,7 @@ body.attorney-site :focus-visible {
 
 body.attorney-site .attorney-page {
   max-width: 1120px;
+  margin: 0 auto;
   box-sizing: border-box;
   padding: clamp(4rem, 8vw, 8rem) 2rem 6rem;
   background: var(--attorney-ivory);
@@ -319,7 +320,7 @@ body.attorney-site .attorney-hero {
   padding: clamp(6rem, 13vw, 11rem) 2rem;
   overflow: hidden;
   border-bottom: 1px solid var(--attorney-line);
-  background: var(--attorney-surface);
+  background: var(--attorney-ivory);
   text-align: center;
 }
 
@@ -668,12 +669,12 @@ body.attorney-site .attorney-service-card h2 {
 }
 
 .attorney-contact-page {
-  max-width: 1120px;
+  max-width: 1180px;
   text-align: left;
 }
 
 .attorney-contact-intro {
-  max-width: 780px;
+  max-width: 40%;
   padding-bottom: clamp(3rem, 6vw, 5rem);
   border-bottom: 1px solid var(--attorney-line);
 }
@@ -698,8 +699,8 @@ body.attorney-site .attorney-contact-intro h1 {
 
 .attorney-contact-grid {
   display: grid;
-  grid-template-columns: minmax(230px, 0.65fr) minmax(0, 1fr);
-  gap: clamp(2rem, 8vw, 8rem);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: clamp(2rem, 5vw, 5rem);
   align-items: start;
   padding: clamp(4rem, 8vw, 7rem) 0;
 }
@@ -716,7 +717,7 @@ body.attorney-site .attorney-contact-intro h1 {
 
 .attorney-contact-aside-copy,
 .attorney-form-note {
-  max-width: 360px;
+  max-width: 100%;
   color: var(--attorney-muted);
 }
 
@@ -924,6 +925,10 @@ body.attorney-site.attorney-motion-ready .attorney-reveal.is-visible {
   .attorney-contact-grid,
   .attorney-contact-legal {
     grid-template-columns: 1fr;
+  }
+
+  .attorney-contact-intro {
+    max-width: none;
   }
 
   .attorney-service-list {

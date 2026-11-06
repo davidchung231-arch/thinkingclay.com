@@ -397,7 +397,8 @@ body.attorney-site .attorney-hero {
   box-sizing: border-box;
   margin: -8rem -2rem 0;
   padding: clamp(6rem, 13vw, 11rem) 2rem;
-  overflow: hidden;
+  overflow: visible;
+  overflow-x: clip;
   border-bottom: 1px solid var(--attorney-line);
   background: var(--attorney-ivory);
   text-align: center;
@@ -427,7 +428,6 @@ body.attorney-site .attorney-section-label {
 body.attorney-site .attorney-hero h1 {
   display: inline-block;
   box-sizing: border-box;
-  max-width: 100%;
   margin: 0;
   color: var(--attorney-charcoal);
   font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
@@ -451,7 +451,7 @@ body.attorney-site .attorney-home-identity {
   position: relative;
   display: inline-block;
   box-sizing: content-box;
-  max-width: 100%;
+  width: max-content;
   overflow: visible;
   padding: 1.25rem clamp(1.25rem, 2.5vw, 2.5rem);
 }
@@ -520,6 +520,7 @@ body.attorney-site .attorney-hero-art {
   inset: 0;
   z-index: 0;
   min-height: 0;
+  overflow: hidden;
   opacity: 0.22;
   pointer-events: none;
 }
@@ -1015,7 +1016,14 @@ body.attorney-site.attorney-motion-ready .attorney-reveal.is-visible {
   }
 
   body.attorney-site .attorney-hero h1 {
+    max-width: 100%;
     white-space: normal;
+  }
+
+  .attorney-name-pulse {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .attorney-contact-intro {

@@ -452,10 +452,16 @@ body.attorney-site .attorney-home-identity {
 .attorney-name-pulse {
   position: relative;
   display: block;
+  isolation: isolate;
   box-sizing: border-box;
   width: 100%;
   overflow: visible;
   padding: 1.25rem clamp(1.25rem, 2.5vw, 2.5rem);
+}
+
+body.attorney-site .attorney-name-pulse h1 {
+  position: relative;
+  z-index: 1;
 }
 
 .attorney-name-pulse::before,
@@ -463,7 +469,7 @@ body.attorney-site .attorney-home-identity {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: -1;
+  z-index: 0;
   width: 125%;
   height: 130%;
   content: '';
@@ -472,16 +478,16 @@ body.attorney-site .attorney-home-identity {
 }
 
 .attorney-name-pulse::before {
-  background: radial-gradient(ellipse at center, rgba(154, 163, 173, 0.18) 0%, rgba(154, 163, 173, 0.08) 28%, transparent 68%);
-  filter: blur(22px);
-  animation: attorney-silver-pulse 4s ease-in-out infinite;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.82) 0%, rgba(210, 216, 223, 0.48) 24%, rgba(154, 163, 173, 0.24) 48%, transparent 72%);
+  filter: blur(28px);
+  animation: attorney-name-silver-pulse 4s ease-in-out infinite;
 }
 
 .attorney-name-pulse::after {
-  background: linear-gradient(90deg, transparent, rgba(154, 163, 173, 0.08), transparent);
-  filter: blur(10px);
-  opacity: 0.7;
-  animation: attorney-silver-sweep 4s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent, rgba(196, 204, 212, 0.32), transparent);
+  filter: blur(14px);
+  opacity: 0.8;
+  animation: attorney-name-silver-sweep 4s ease-in-out infinite;
 }
 
 .attorney-hero-admission,
@@ -998,6 +1004,16 @@ body.attorney-site.attorney-motion-ready .attorney-reveal.is-visible {
 @keyframes attorney-silver-sweep {
   0%, 100% { opacity: 0.06; transform: translate(-50%, -50%) scaleX(0.75); }
   50% { opacity: 0.25; transform: translate(-50%, -50%) scaleX(1); }
+}
+
+@keyframes attorney-name-silver-pulse {
+  0%, 100% { opacity: 0.35; transform: translate(-50%, -50%) scale(0.92); }
+  50% { opacity: 0.9; transform: translate(-50%, -50%) scale(1.08); }
+}
+
+@keyframes attorney-name-silver-sweep {
+  0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scaleX(0.75); }
+  50% { opacity: 0.8; transform: translate(-50%, -50%) scaleX(1); }
 }
 
 @media (prefers-reduced-motion: reduce) {

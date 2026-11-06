@@ -4,8 +4,6 @@ description: "Confirmation for a legal inquiry submitted to David S. Chung, Esq.
 date: 2026-01-01
 draft: false
 layout: attorney-page
-redirect: "/attorney/"
-redirectDelay: 3
 ---
 
 <p class="attorney-lead">Your message has been received.</p>

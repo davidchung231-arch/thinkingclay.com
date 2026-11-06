@@ -2,7 +2,6 @@
 <html lang="{{ .Site.Language.Lang | default "en" }}">
 <head>
   {{- partial "head.html" . -}}
-  <title>{{ .Title }}</title>
   {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
 </head>
 <body class="attorney-site attorney-home-route">

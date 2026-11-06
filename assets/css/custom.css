@@ -42,6 +42,28 @@ body {
   margin: 0;
 }
 
+input,
+textarea,
+select,
+button {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.a11y-controls {
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.a11y-control {
+  width: auto !important;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  height: auto !important;
+  padding: 0.25rem 0.5rem !important;
+  white-space: nowrap;
+}
+
 /* ── Typography ── */
 h1, h2, h3 {
   font-family: 'Cormorant Garamond', serif;
@@ -167,6 +189,19 @@ body.high-contrast .site-footer {
 .site-footer a {
   color: #555;
 }
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.5rem;
+}
+
+.site-footer nav a {
+  margin-right: 0 !important;
+  overflow-wrap: anywhere;
+}
+
 .site-footer a:hover {
   color: var(--purple);
 }
@@ -176,6 +211,51 @@ body.high-contrast .site-footer {
   h1 {
     font-size: 1.8rem;
   }
+
+  main h1,
+  main p,
+  main li,
+  main dt,
+  main dd,
+  main a,
+  main strong {
+    overflow-wrap: anywhere;
+  }
+
+  main input,
+  main textarea,
+  main select,
+  main button {
+    min-width: 0;
+    width: 100%;
+    white-space: normal;
+  }
+
+  main table {
+    max-width: none;
+  }
+
+  .legal-content {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .attorney-site-nav a {
+    overflow-wrap: anywhere;
+  }
+
+  .attorney-service-card {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  body.attorney-site .attorney-button {
+    min-width: 0;
+    width: 100%;
+    padding-inline: 0.5rem;
+    letter-spacing: 0.08em;
+  }
+
   section[style*="padding: 5rem"] {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -186,7 +266,7 @@ body.high-contrast .site-footer {
 body.attorney-site {
   --attorney-ivory: #F3F1EC;
   --attorney-charcoal: #242A31;
-  --attorney-muted: #59616B;
+  --attorney-muted: #4E5660;
   --attorney-surface: #FFFFFF;
   --attorney-line: #D8D5CF;
   --attorney-silver: #9AA3AD;
@@ -356,6 +436,14 @@ body.attorney-site .attorney-hero h1 {
   white-space: nowrap;
 }
 
+body.attorney-site .attorney-hero,
+body.attorney-site .attorney-content,
+body.attorney-site .attorney-disclosure,
+body.attorney-site .attorney-page-note,
+body.attorney-site .attorney-home-identity {
+  overflow-wrap: anywhere;
+}
+
 .attorney-name-pulse {
   position: relative;
   display: inline-block;
@@ -520,12 +608,14 @@ body.attorney-site .attorney-button span {
   gap: 0.65rem;
   align-items: center;
   margin-top: 1.5rem;
-  color: var(--attorney-silver) !important;
+  color: var(--attorney-charcoal) !important;
   font-family: Inter, Arial, sans-serif;
   font-size: 0.85rem;
   letter-spacing: 0.14em;
   text-decoration: none;
   text-transform: uppercase;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .attorney-home-scope {

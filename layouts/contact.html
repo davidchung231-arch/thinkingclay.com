@@ -27,16 +27,16 @@
         <strong>Email:</strong> <a href="mailto:hello@thinkingclay.com" style="color: #2D1B69;">hello@thinkingclay.com</a><br>
       </p>
 
-      <div id="contact-success" style="display: none; max-width: 500px; margin: 2.5rem auto 0 auto; background: #F5F5F3; padding: 2rem; border-left: 3px solid #2D1B69;" role="status" aria-live="polite">
+      <div id="contact-success" tabindex="-1" style="display: none; max-width: 500px; margin: 2.5rem auto 0 auto; background: #F5F5F3; padding: 2rem; border-left: 3px solid #2D1B69;" role="status" aria-live="polite">
         <p style="margin-top: 0; font-weight: 600; color: #2D1B69;">One Step Closer to Clarity.</p>
         <p style="font-size: 0.9rem; line-height: 1.7; color: #555;">
           Thank you for contacting Thinking Clay. We have received your message and appreciate your interest in our services. We aim to respond within three business days.
         </p>
-        <button onclick="window.location.href='/'" style="margin-top: 1rem; background: transparent; color: #2D1B69; border: 1px solid #2D1B69; padding: 0.5rem 1.5rem; font-family: 'Inter', sans-serif; font-size: 0.85rem; cursor: pointer;">Back to Home</button>
+        <a href="/" style="margin-top: 1rem; background: transparent; color: #2D1B69; border: 1px solid #2D1B69; padding: 0.5rem 1.5rem; font-family: 'Inter', sans-serif; font-size: 0.85rem; text-decoration: none; display: inline-block;">Back to Home</a>
         <button onclick="resetContactForm()" style="margin-top: 1rem; background: transparent; color: #2D1B69; border: 1px solid #2D1B69; padding: 0.5rem 1.5rem; font-family: 'Inter', sans-serif; font-size: 0.85rem; cursor: pointer; margin-left: 0.5rem;">Send another message</button>
       </div>
 
-      <div id="contact-error" style="display: none; max-width: 500px; margin: 2.5rem auto 0 auto; background: #FDF2F2; padding: 2rem; border-left: 3px solid #C0392B;" role="alert" aria-live="assertive">
+      <div id="contact-error" tabindex="-1" style="display: none; max-width: 500px; margin: 2.5rem auto 0 auto; background: #FDF2F2; padding: 2rem; border-left: 3px solid #C0392B;" role="alert" aria-live="assertive">
         <p style="margin-top: 0; font-weight: 600; color: #C0392B;">Something went wrong.</p>
         <p style="font-size: 0.9rem; line-height: 1.7; color: #555;">
           Please try again or email us directly at <a href="mailto:hello@thinkingclay.com" style="color: #2D1B69;">hello@thinkingclay.com</a>.
@@ -77,14 +77,13 @@
         form.style.display = 'none';
         successEl.style.display = 'block';
         form.reset();
-        const firstBtn = successEl.querySelector('button');
-        if (firstBtn) firstBtn.focus();
+        const firstAction = successEl.querySelector('a, button');
+        if (firstAction) firstAction.focus();
       })
       .catch(function () {
         form.style.display = 'none';
         errorEl.style.display = 'block';
-        const firstBtn = errorEl.querySelector('button');
-        if (firstBtn) firstBtn.focus();
+        errorEl.focus();
       })
       .finally(function () {
         btn.disabled = false;

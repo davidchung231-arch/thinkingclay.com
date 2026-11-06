@@ -3,8 +3,6 @@ title: "Thank You"
 date: 2026-01-01
 draft: false
 layout: single
-redirect: "/"
-redirectDelay: 3
 ---
 
 One Step Closer to Clarity.

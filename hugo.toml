@@ -7,13 +7,13 @@ enableRobotsTXT = true
 
 [params]
 author = 'David S. Chung, Esq.'
-description = 'Strategic Business Advisory and Legal Services by David S. Chung, Esq., Attorney at Law, admitted in the State of New York.'
+description = 'Practical business support, communication, and process improvement for businesses working in the United States.'
 
 [params.theme]
   font = 'Inter'
   headingFont = 'Cormorant Garamond'
-  primaryColor = '#2D1B69'
-  backgroundColor = '#FAFAF8'
+  primaryColor = '#242A31'
+  backgroundColor = '#F3F1EC'
 
 [menus]
   [[menus.footer]]

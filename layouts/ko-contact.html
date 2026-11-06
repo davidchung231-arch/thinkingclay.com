@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  {{- partial "head.html" . -}}
+</head>
+<body class="tc-site tc-contact-page tc-korean-page">
+  {{- partial "header.html" . -}}
+  <main id="main-content">
+    <section class="tc-page-hero tc-contact-hero" aria-labelledby="page-title"><p class="tc-eyebrow">상담 및 문의</p><h1 id="page-title">Thinking Clay에 문의하기</h1><p class="tc-page-lead">미국 사업과 관련해 어떤 실무 지원이 필요한지 알려주세요.</p></section>
+    <section class="tc-contact-layout" aria-label="비즈니스 문의 양식">
+      <aside class="tc-contact-aside"><p class="tc-eyebrow">비법률 비즈니스 지원</p><h2>간단한 문의로 시작할 수 있습니다.</h2><p>Thinking Clay LLC는 비즈니스 커뮤니케이션, 정보 정리, 조율, 운영 지원을 제공합니다. 이 양식으로 비밀이거나 긴급한 법률 정보를 보내지 마세요.</p><dl class="tc-contact-details"><div><dt>이메일</dt><dd><a href="mailto:hello@thinkingclay.com">hello@thinkingclay.com</a></dd></div><div><dt>전화</dt><dd><a href="tel:+16092553344">609-255-3344</a></dd></div><div><dt>사무실</dt><dd>12 Main St., Princeton, NJ 08540</dd></div></dl></aside>
+      <div>
+        <form id="contact-form" action="https://formspree.io/f/mkodwylo" method="POST" class="tc-contact-form" aria-label="비즈니스 문의 양식" aria-describedby="contact-form-note">
+          <p id="contact-form-note" class="tc-form-note">필수 항목을 작성해 주세요. 이 양식을 제출해도 변호사-의뢰인 관계가 성립하지 않습니다. 법률 문의는 <a href="/attorney/contact/">별도의 변호사 문의 페이지</a>를 이용해 주세요.</p>
+          <div class="tc-form-field"><label for="contact-name">이름 <span aria-hidden="true">*</span></label><input type="text" id="contact-name" name="name" autocomplete="name" required></div>
+          <div class="tc-form-field"><label for="contact-email">이메일 <span aria-hidden="true">*</span></label><input type="email" id="contact-email" name="email" autocomplete="email" required><input type="hidden" name="_replyto" value="hello@thinkingclay.com"></div>
+          <div class="tc-form-field"><label for="contact-message">문의 내용 <span aria-hidden="true">*</span></label><textarea id="contact-message" name="message" rows="7" required></textarea></div>
+          <button class="tc-button tc-button-dark" type="submit">문의 보내기 <span aria-hidden="true">↗</span></button>
+        </form>
+        <div id="contact-success" class="tc-form-feedback tc-form-success" tabindex="-1" hidden role="status" aria-live="polite"><h2>감사합니다.</h2><p>문의가 접수되었습니다. Thinking Clay의 비즈니스 지원에 관심을 가져주셔서 감사합니다.</p><a class="tc-button tc-button-light" href="/ko/">처음으로</a><button class="tc-text-button" type="button" data-reset-contact>다시 보내기</button></div>
+        <div id="contact-error" class="tc-form-feedback tc-form-error" tabindex="-1" hidden role="alert" aria-live="assertive"><h2>문제가 발생했습니다.</h2><p>다시 시도하거나 <a href="mailto:hello@thinkingclay.com">hello@thinkingclay.com</a>으로 직접 연락해 주세요.</p><button class="tc-text-button" type="button" data-reset-contact>다시 시도</button></div>
+      </div>
+    </section>
+  </main>
+  <script>
+  (function () {
+    'use strict';
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+    var successEl = document.getElementById('contact-success');
+    var errorEl = document.getElementById('contact-error');
+    var endpoint = 'https://formspree.io/f/mkodwylo';
+    function resetForm() { form.hidden = false; successEl.hidden = true; errorEl.hidden = true; var button = form.querySelector('button[type="submit"]'); button.disabled = false; button.textContent = '문의 보내기 ↗'; document.getElementById('contact-name').focus(); }
+    form.addEventListener('submit', function (event) { event.preventDefault(); var button = form.querySelector('button[type="submit"]'); button.disabled = true; button.textContent = '전송 중…'; fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } }).then(function (response) { if (!response.ok) throw new Error('Form submission failed'); form.hidden = true; successEl.hidden = false; form.reset(); successEl.focus(); }).catch(function () { form.hidden = true; errorEl.hidden = false; errorEl.focus(); }).finally(function () { button.disabled = false; button.textContent = '문의 보내기 ↗'; }); });
+    document.querySelectorAll('[data-reset-contact]').forEach(function (button) { button.addEventListener('click', resetForm); });
+  }());
+  </script>
+{{- partial "footer.html" . -}}
+</body>
+</html>

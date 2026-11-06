@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  {{- partial "head.html" . -}}
+</head>
+<body class="tc-site tc-interior tc-korean-page">
+  {{- partial "header.html" . -}}
+  <main id="main-content">
+    <section class="tc-page-hero" aria-labelledby="page-title"><p class="tc-eyebrow">Thinking Clay LLC</p><h1 id="page-title">{{ .Title }}</h1></section>
+    <section class="tc-reading-section">{{ .Content }}</section>
+  </main>
+{{- partial "footer.html" . -}}
+</body>
+</html>

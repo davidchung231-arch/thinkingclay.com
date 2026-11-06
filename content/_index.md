@@ -2,6 +2,5 @@
 title: "Thinking Clay LLC"
 date: 2026-01-01
 draft: false
+description: "Practical business support, communication, and process improvement for businesses working in the United States."
 ---
-
-# Ask. Think. Solve.

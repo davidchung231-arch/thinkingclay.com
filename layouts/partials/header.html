@@ -1,24 +1,38 @@
 <a href="#main-content" class="skip-link">Skip to main content</a>
-<header style="max-width: 1100px; margin: 0 auto; padding: 1.2rem 2rem 0 2rem; width: 100%; box-sizing: border-box;">
-  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; width: 100%; box-sizing: border-box;">
-
-    <div class="a11y-controls" style="display: flex; gap: 0.5rem; align-items: center;">
-      <button class="a11y-control" id="a11y-font-decrease" aria-label="A-: Decrease font size" title="Decrease font size" style="background: transparent; border: 1px solid #2D1B69; color: #2D1B69; width: 34px; height: 34px; border-radius: 2px; cursor: pointer; font-size: 1.1rem; font-weight: 600; line-height: 1;">A-</button>
-      <button class="a11y-control" id="a11y-font-reset" title="Reset font size" style="background: transparent; border: 1px solid #2D1B69; color: #2D1B69; width: 34px; height: 34px; border-radius: 2px; cursor: pointer; font-size: 0.7rem; font-weight: 600; line-height: 1; padding: 0 4px;">A</button>
-      <button class="a11y-control" id="a11y-font-increase" aria-label="A+: Increase font size" title="Increase font size" style="background: transparent; border: 1px solid #2D1B69; color: #2D1B69; width: 34px; height: 34px; border-radius: 2px; cursor: pointer; font-size: 1.2rem; font-weight: 600; line-height: 1;">A+</button>
-      <button class="a11y-control" id="a11y-contrast-toggle" aria-label="HC: Toggle high contrast mode" title="Toggle high contrast" style="background: transparent; border: 1px solid #2D1B69; color: #2D1B69; width: 34px; height: 34px; border-radius: 2px; cursor: pointer; font-size: 0.75rem; font-weight: 600; line-height: 1; padding: 0 4px;">HC</button>
-    </div>
-
-    <nav aria-label="Primary navigation">
-      {{ if eq .RelPermalink "/" }}
-        <a href="/about/" style="font-family:'Inter',sans-serif;color:#2D1B69;font-size:0.85rem;text-decoration:none;letter-spacing:0.05em;border-bottom:1px solid #2D1B69;padding-bottom:2px;">About</a>
-      {{ else if eq .RelPermalink "/kr/" }}
-        <a href="/kr/" style="font-family:'Inter',sans-serif;color:#2D1B69;font-size:0.85rem;text-decoration:none;letter-spacing:0.05em;border-bottom:1px solid #2D1B69;padding-bottom:2px;">Home</a>
-      {{ else if hasPrefix .RelPermalink "/attorney" }}
-        <a href="/attorney/" style="font-family:'Inter',sans-serif;color:#2D1B69;font-size:0.85rem;text-decoration:none;letter-spacing:0.05em;border-bottom:1px solid #2D1B69;padding-bottom:2px;">Home</a>
-      {{ else }}
-        <a href="/" style="font-family:'Inter',sans-serif;color:#2D1B69;font-size:0.85rem;text-decoration:none;letter-spacing:0.05em;border-bottom:1px solid #2D1B69;padding-bottom:2px;">Home</a>
-      {{ end }}
+<header class="tc-site-header">
+  <div class="tc-header-inner">
+    <a class="tc-brand" href="/" aria-label="Thinking Clay LLC home">
+      <img src="/images/logo.svg" alt="" width="42" height="42">
+      <span>Thinking Clay LLC</span>
+    </a>
+    <nav class="tc-primary-nav" aria-label="Primary navigation">
+      <a href="/services/"{{ if hasPrefix .RelPermalink "/services" }} aria-current="page"{{ end }}>Services</a>
+      <a href="/about/"{{ if hasPrefix .RelPermalink "/about" }} aria-current="page"{{ end }}>About</a>
+      <a href="/resources/"{{ if hasPrefix .RelPermalink "/resources" }} aria-current="page"{{ end }}>Resources</a>
+      <a href="/attorney/">Attorney <span aria-hidden="true">↗</span></a>
+      <a href="/contact/"{{ if hasPrefix .RelPermalink "/contact" }} aria-current="page"{{ end }}>Contact</a>
     </nav>
+    {{ $isKo := eq (.Params.pageLanguage | default "en") "ko" }}
+    {{ $enPath := .RelPermalink }}
+    {{ $koPath := "/ko/" }}
+    {{ if $isKo }}
+      {{ $enPath = replaceRE "^/ko" "" .RelPermalink }}
+      {{ if eq $enPath "" }}{{ $enPath = "/" }}{{ end }}
+      {{ $koPath = .RelPermalink }}
+    {{ else if hasPrefix .RelPermalink "/about" }}{{ $koPath = "/ko/about/" }}
+    {{ else if hasPrefix .RelPermalink "/services" }}{{ $koPath = "/ko/services/" }}
+    {{ else if hasPrefix .RelPermalink "/resources" }}{{ $koPath = "/ko/resources/" }}
+    {{ else if hasPrefix .RelPermalink "/contact" }}{{ $koPath = "/ko/contact/" }}{{ end }}
+    <div class="tc-header-tools">
+      <a href="{{ $enPath }}"{{ if not $isKo }} aria-current="page"{{ end }}>EN</a>
+      <span aria-hidden="true">|</span>
+      <a href="{{ $koPath }}" lang="ko"{{ if $isKo }} aria-current="page"{{ end }}>KR</a>
+      <div class="a11y-controls" aria-label="Accessibility controls">
+        <button class="a11y-control" id="a11y-font-decrease" aria-label="A−: Decrease text size" title="Decrease text size">A−</button>
+        <button class="a11y-control" id="a11y-font-reset" aria-label="A: Reset text size" title="Reset text size">A</button>
+        <button class="a11y-control" id="a11y-font-increase" aria-label="A+: Increase text size" title="Increase text size">A+</button>
+        <button class="a11y-control" id="a11y-contrast-toggle" aria-label="HC: Toggle high contrast mode" title="Toggle high contrast">HC</button>
+      </div>
+    </div>
   </div>
 </header>

@@ -3,34 +3,21 @@ title: "Services"
 date: 2026-01-01
 draft: false
 layout: services
+description: "Business support, communication, coordination, and practical AI process improvement from Thinking Clay LLC."
 ---
 
-## Business Advisory — Thinking Clay LLC
+## U.S. Market Entry & Business Support
 
-Strategic consulting for operators entering or expanding in the U.S. market.
+Practical business coordination and operational support for businesses entering or operating in the United States.
 
-- U.S. market entry strategy
-- Amazon Seller operational advisory
-- Business process optimization
-- Cross-border commercial structuring
+## Business Communication & Coordination
 
-**Provided by Thinking Clay LLC.**
+Helping Korean-speaking clients communicate effectively with U.S. professionals, organize information, prepare for meetings, and coordinate business-related matters.
 
----
+## AI & Business Process Improvement
 
-## Legal Services — David S. Chung, Esq.
+Helping businesses improve workflows, reduce repetitive tasks, and use practical AI tools.
 
-Strategic legal counsel for businesses that need precise, practical solutions.
+### Separate legal practice
 
-- Contract drafting and review
-- Entity formation and operating agreements
-- Intellectual property
-- Regulatory compliance
-- Employment matters
-- U.S. market expansion
-
-**Provided by David S. Chung, Esq., Attorney at Law, admitted in the State of New York.**
-
----
-
-*Thinking Clay LLC is a business advisory company. Legal services are provided separately by David S. Chung, Esq.*
+Thinking Clay LLC does not provide legal advice or legal representation. For separate legal services, visit [David S. Chung, Esq.'s attorney practice](/attorney/).

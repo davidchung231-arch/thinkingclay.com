@@ -1,6 +1,26 @@
 {{- $css := resources.Get "css/custom.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 <title>{{ with .Title }}{{ . }} | {{ end }}Thinking Clay</title>
+{{ if not (hasPrefix .RelPermalink "/attorney") }}
+  <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+{{ end }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{ if not (hasPrefix .RelPermalink "/attorney") }}
+  {{ $isKo := eq (.Params.pageLanguage | default "en") "ko" }}
+  {{ $enPath := .RelPermalink }}
+  {{ $koPath := "/ko/" }}
+  {{ if $isKo }}
+    {{ $enPath = replaceRE "^/ko" "" .RelPermalink }}
+    {{ if eq $enPath "" }}{{ $enPath = "/" }}{{ end }}
+    {{ $koPath = .RelPermalink }}
+  {{ else if hasPrefix .RelPermalink "/about" }}{{ $koPath = "/ko/about/" }}
+  {{ else if hasPrefix .RelPermalink "/services" }}{{ $koPath = "/ko/services/" }}
+  {{ else if hasPrefix .RelPermalink "/resources" }}{{ $koPath = "/ko/resources/" }}
+  {{ else if hasPrefix .RelPermalink "/contact" }}{{ $koPath = "/ko/contact/" }}{{ end }}
+  <link rel="alternate" hreflang="en" href="{{ $enPath | absURL }}">
+  <link rel="alternate" hreflang="ko" href="{{ $koPath | absURL }}">
+  <link rel="alternate" hreflang="x-default" href="{{ $enPath | absURL }}">
+{{ end }}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {{- if .Params.redirect }}

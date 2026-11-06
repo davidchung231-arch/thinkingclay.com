@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang | default "en" }}">
+<html lang="en">
 <head>
   {{- partial "head.html" . -}}
+  <link rel="preload" as="image" href="/images/hero/mountains.webp" type="image/webp">
 </head>
-<body>
+<body class="tc-site tc-home">
   {{- partial "header.html" . -}}
   <main id="main-content">
-    <section style="min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 6rem 2rem 2rem 2rem;">
-      <h1 style="font-family: 'Cormorant Garamond', serif; color: #2D1B69; font-size: 2.6rem; font-weight: 600; letter-spacing: 0.08em; margin-bottom: 3rem;">
-        Ask. Think. Solve.
-      </h1>
-      <div style="text-align: center; padding: 3rem 0 2rem 0;">
-        <a href="/contact/" aria-label="Contact Thinking Clay">
-          <img src="/images/logo.svg" alt="Thinking Clay logo" class="logo-mark logo-animate" width="80" height="80">
-        </a>
-      </div>
+    {{ partial "tc-slideshow.html" . }}
+    <section class="tc-section tc-intro-section" aria-labelledby="intro-heading">
+      <div class="tc-section-heading"><p class="tc-eyebrow">A practical partner</p><h2 id="intro-heading">Business support with a clearer point of view.</h2></div>
+      <div class="tc-section-copy"><p>Thinking Clay helps businesses navigate operational complexity, improve communication, and turn practical ideas into action.</p><a class="tc-text-link" href="/about/">Meet Thinking Clay <span aria-hidden="true">↗</span></a></div>
     </section>
+    <section class="tc-section tc-services-section" aria-labelledby="services-heading">
+      <div class="tc-section-heading"><p class="tc-eyebrow">What we do</p><h2 id="services-heading">Practical support for the work ahead.</h2></div>
+      <div class="tc-service-grid">
+        <article class="tc-service-card"><span class="tc-card-number">01</span><h3>U.S. Market Entry &amp; Business Support</h3><p>Practical business coordination and operational support for businesses entering or operating in the United States.</p></article>
+        <article class="tc-service-card"><span class="tc-card-number">02</span><h3>Business Communication &amp; Coordination</h3><p>Helping Korean-speaking clients communicate effectively with U.S. professionals, organize information, prepare for meetings, and coordinate business-related matters.</p></article>
+        <article class="tc-service-card"><span class="tc-card-number">03</span><h3>AI &amp; Business Process Improvement</h3><p>Helping businesses improve workflows, reduce repetitive tasks, and use practical AI tools.</p></article>
+      </div>
+      <div class="tc-separate-practice"><span>Separate legal practice</span><a href="/attorney/">David S. Chung, Esq. — Attorney services <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section class="tc-section tc-cta-section" aria-labelledby="cta-heading"><p class="tc-eyebrow">Start with a conversation</p><h2 id="cta-heading">Clearer next steps begin with a good question.</h2><a class="tc-button tc-button-dark" href="/contact/">Tell us what you are working on <span aria-hidden="true">↗</span></a></section>
   </main>
 
 {{- partial "footer.html" . -}}

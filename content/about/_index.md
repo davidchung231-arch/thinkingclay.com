@@ -3,30 +3,13 @@ title: "About Thinking Clay LLC"
 date: 2026-01-01
 draft: false
 layout: about
+description: "Thinking Clay helps businesses navigate operational complexity, improve communication, and turn practical ideas into action."
 ---
 
-Thinking Clay LLC is a boutique business consulting firm that helps companies turn complex challenges into practical, actionable strategies. 
+## A Practical Partner for Your U.S. Business
 
-Businesses rarely struggle because of a lack of ideas. More often, they struggle because ideas are difficult to execute, scale, or adapt to a changing market.  
+Thinking Clay helps businesses navigate operational complexity, improve communication, and turn practical ideas into action.
 
-We work alongside business owners and leadership teams to simplify decisions, improve operations, and build sustainable foundations for growth.
+Our work is grounded in practical experience, clear communication, cross-cultural understanding, and cost-conscious processes. We help teams organize the work in front of them, prepare for conversations with U.S. professionals, and move from ideas to useful next steps.
 
-Our approach is thoughtful, analytical, and execution-focused. Rather than offering generic recommendations, we take the time to understand each client's business, identify the issues that matter most, and develop solutions that are practical, measurable, and aligned with long-term objectives.
-
-We believe the best consulting creates clarity—not complexity. Every recommendation should help businesses make better decisions, operate more effectively, and move forward with confidence.
-
-Our consulting services include:
-
-* U.S. market entry strategy
-* Cross-border business advisory
-* Business process optimization
-* Operational strategy
-* Commercial and organizational planning
-* AI and workflow optimization
-
-Whether you're entering a new market, refining existing operations, or preparing for your next stage of growth, Thinking Clay LLC is committed to delivering practical insight and lasting business value.
-
-<br>
-</br>
-
-<div style="text-align: center;"><strong>Thoughtfully shaped  |  Practically executed  |  Built for long-term growth.</strong></div>
+Thinking Clay LLC provides business advisory and coordination services. It does not provide legal services. Legal services are provided separately by David S. Chung, Esq. through his individual legal practice.

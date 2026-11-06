@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang | default "en" }}">
+<html lang="{{ .Params.pageLanguage | default "en" }}">
 <head>
   {{- partial "head.html" . -}}
 </head>
-<body>
+<body class="tc-site tc-interior">
   {{- partial "header.html" . -}}
   <main id="main-content">
-    <section style="max-width: 1100px; margin: 0 auto; padding: 5rem 2rem 3rem 2rem; line-height: 1.8;">
-      <h1 style="font-family: 'Cormorant Garamond', serif; color: #2D1B69; font-size: 2.4rem; font-weight: 600; margin-bottom: 2rem;">{{ .Title }}</h1>
-      <div class="legal-content">
-        {{ .Content }}
-      </div>
-    </section>
+    <section class="tc-page-hero" aria-labelledby="page-title"><p class="tc-eyebrow">Thinking Clay LLC</p><h1 id="page-title">{{ .Title }}</h1></section>
+    <section class="tc-reading-section legal-content">{{ .Content }}</section>
   </main>
 
 {{- partial "footer.html" . -}}

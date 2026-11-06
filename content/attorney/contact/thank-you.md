@@ -1,18 +1,15 @@
 ---
-title: "Thank You"
+title: "Inquiry Received"
+description: "Confirmation for a legal inquiry submitted to David S. Chung, Esq."
 date: 2026-01-01
 draft: false
-layout: single
+layout: attorney-page
 redirect: "/attorney/"
 redirectDelay: 3
 ---
 
-One Step Closer to Clarity.
+<p class="attorney-lead">Your message has been received.</p>
 
-Thank you for contacting David S. Chung, Esq.
+<p>Thank you for contacting David S. Chung, Esq. Submission does not create an attorney-client relationship or mean that the matter will be accepted.</p>
 
-Your message has been received. Submission does not create an attorney-client relationship or mean that the matter will be accepted.
-
-<p style="margin-top: 2rem;">
-  <a href="/attorney/" style="background: transparent; color: #2D1B69; border: 1px solid #2D1B69; padding: 0.5rem 1.5rem; font-family: 'Inter', sans-serif; font-size: 0.85rem; text-decoration: none; display: inline-block;">Back to Attorney</a>
-</p>
+<p><a class="attorney-silver-link" href="/attorney/">Back to attorney home <span aria-hidden="true">↗</span></a></p>

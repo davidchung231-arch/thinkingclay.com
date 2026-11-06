@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "en" }}">
+<head>
+  {{- partial "head.html" . -}}
+  <title>{{ .Title }}</title>
+  {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+</head>
+<body class="attorney-site attorney-interior-route">
+  {{- partial "attorney-header.html" . -}}
+  <main id="main-content">
+    <article class="attorney-page attorney-interior-page">
+      <header class="attorney-interior-heading">
+        <p class="attorney-eyebrow">David S. Chung, Esq. · Attorney at Law</p>
+        <h1>{{ .Title }}</h1>
+      </header>
+      <div class="attorney-interior-content">
+        {{ .Content }}
+      </div>
+      <div class="attorney-disclosure">
+        <p><strong>Attorney Advertising.</strong> The information contained on this website is provided for general informational purposes only and does not constitute legal advice. Viewing this website, contacting or communicating with David S. Chung does not create an attorney-client relationship. An attorney-client relationship is established only through a written engagement agreement. Please do not submit confidential or time-sensitive information through this website until an attorney-client relationship has been established. Prior results do not guarantee a similar outcome.</p>
+      </div>
+    </article>
+  </main>
+  {{- partial "attorney-motion.html" . -}}
+  {{- partial "footer.html" . -}}
+</body>
+</html>

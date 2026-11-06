@@ -2,20 +2,23 @@
 <html lang="{{ .Site.Language.Lang | default "en" }}">
 <head>
   {{- partial "head.html" . -}}
+  <title>{{ .Title }}</title>
+  {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
 </head>
-<body>
-  {{- partial "header.html" . -}}
+<body class="attorney-site attorney-contact-route">
+  {{- partial "attorney-header.html" . -}}
   <main id="main-content">
     <section class="attorney-page attorney-contact-page">
       <div class="attorney-contact-intro">
-        <p class="attorney-eyebrow">A considered first step</p>
+        <p class="attorney-eyebrow">ATTORNEY AT LAW</p>
+        <h1>LEGAL INQUIRIES</h1>
         {{ .Content }}
       </div>
 
       <div class="attorney-contact-grid">
         <div class="attorney-contact-aside attorney-reveal">
           <p class="attorney-section-label">Before you send</p>
-          <h2 id="attorney-contact-form-title">Tell me a little more</h2>
+          <h2 id="attorney-contact-form-title">A considered first step.</h2>
           <p class="attorney-contact-aside-copy">A short description of the business context and the decision in front of you is enough to begin.</p>
           <p class="attorney-form-note" id="attorney-form-note"><strong>Please do not include confidential or time-sensitive information.</strong> Do not send documents, opposing-party names, deadlines, or detailed facts. Submitting this form does not create an attorney-client relationship or mean that David S. Chung, Esq. has agreed to represent you.</p>
         </div>
@@ -36,7 +39,7 @@
             <textarea id="attorney-message" name="message" rows="7" required aria-describedby="attorney-form-note"></textarea>
           </div>
 
-          <button type="submit" class="attorney-button">Send message <span aria-hidden="true">↗</span></button>
+          <button type="submit" class="attorney-button">SEND MESSAGE <span aria-hidden="true">↗</span></button>
         </form>
       </div>
 

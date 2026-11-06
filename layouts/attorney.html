@@ -2,24 +2,30 @@
 <html lang="{{ .Site.Language.Lang | default "en" }}">
 <head>
   {{- partial "head.html" . -}}
+  <title>{{ .Title }}</title>
+  {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
 </head>
-<body>
-  {{- partial "header.html" . -}}
+<body class="attorney-site attorney-home-route">
+  {{- partial "attorney-header.html" . -}}
   <main id="main-content">
     <article class="attorney-page attorney-landing-page">
       <header class="attorney-hero">
         <div class="attorney-hero-copy">
-          <p class="attorney-eyebrow">David S. Chung, Esq. · Attorney at Law</p>
-          <h1>Business Counsel for <em>Commercial Decisions</em></h1>
-          <p class="attorney-hero-subtitle">Practical legal guidance on New York law, commercial agreements, and cross-border business transactions.</p>
-          <a class="attorney-button attorney-hero-button" href="/attorney/contact/">Let's Talk <span aria-hidden="true">↗</span></a>
+          <p class="attorney-eyebrow">ATTORNEY AT LAW</p>
+          <div class="attorney-name-pulse">
+            <h1>DAVID S. CHUNG, ESQ.</h1>
+          </div>
+          <p class="attorney-hero-admission">ADMITTED IN NEW YORK</p>
+          <div class="attorney-hero-divider" role="presentation"></div>
+          <p class="attorney-hero-services">COMMERCIAL CONTRACTS <span aria-hidden="true">·</span> BUSINESS LEGAL ADVISORY <span aria-hidden="true">·</span> CROSS-BORDER TRANSACTIONS</p>
+          <p class="attorney-hero-jurisdictions">NEW YORK LAW <span aria-hidden="true">·</span> U.S.–KOREA COMMERCIAL MATTERS</p>
+          <a class="attorney-button attorney-hero-button" href="/attorney/contact/">LEGAL INQUIRIES <span aria-hidden="true">↗</span></a>
         </div>
         <div class="attorney-hero-art" aria-hidden="true">
           <div class="attorney-hero-art-ring attorney-hero-art-ring-one"></div>
           <div class="attorney-hero-art-ring attorney-hero-art-ring-two"></div>
           <div class="attorney-hero-art-line attorney-hero-art-line-one"></div>
           <div class="attorney-hero-art-line attorney-hero-art-line-two"></div>
-          <span class="attorney-hero-art-mark">TC</span>
         </div>
       </header>
 

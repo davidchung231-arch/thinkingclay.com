@@ -425,13 +425,16 @@ body.attorney-site .attorney-section-label {
 }
 
 body.attorney-site .attorney-hero h1 {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 100%;
   margin: 0;
   color: var(--attorney-charcoal);
   font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
   font-size: clamp(3.2rem, 7.5vw, 6.8rem);
   font-weight: 400;
   letter-spacing: 0.02em;
-  line-height: 1;
+  line-height: 1.06;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -447,7 +450,10 @@ body.attorney-site .attorney-home-identity {
 .attorney-name-pulse {
   position: relative;
   display: inline-block;
-  padding: 1.25rem 0.8rem;
+  box-sizing: content-box;
+  max-width: 100%;
+  overflow: visible;
+  padding: 1.25rem clamp(1.25rem, 2.5vw, 2.5rem);
 }
 
 .attorney-name-pulse::before,

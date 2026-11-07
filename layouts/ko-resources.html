@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="ko"><head>{{- partial "head.html" . -}}
+<style>
+.resource-grid{max-width:1120px;margin:auto;padding:4rem 2.25rem 7rem;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.resource-card{display:flex;flex-direction:column;padding:2rem;border:1px solid #d8d5cf;border-top:3px solid #c6a365;background:#fff}.resource-card .resource-number{font-size:.85rem;color:#59616b}.resource-card .resource-category{margin:2.5rem 0 .8rem;font-size:.8rem;font-weight:600;color:#59616b}.resource-card h2{font-size:2rem;line-height:1.1;margin:0 0 1rem}.resource-card p{color:#59616b;line-height:1.7}.resource-card a{margin-top:auto;padding-top:1rem;font-weight:600;text-decoration:underline;text-underline-offset:.2em}@media(max-width:800px){.resource-grid{grid-template-columns:1fr;padding:3rem 1.1rem 5rem}.resource-card .resource-category{margin-top:1.5rem}}
+.resource-card h2{word-break:keep-all;overflow-wrap:anywhere}
+</style></head><body class="tc-site tc-interior tc-korean-page">{{- partial "header.html" . -}}
+<main id="main-content"><section class="tc-page-hero" aria-labelledby="page-title"><p class="tc-eyebrow">Thinking Clay LLC</p><h1 id="page-title">자료실</h1><p class="tc-page-lead">한국과 미국을 오가는 비즈니스에 도움이 되는 실무 가이드.</p></section>
+<section class="resource-grid" aria-label="비즈니스 가이드">{{ range .Pages.ByWeight }}<article class="resource-card"><span class="resource-number">{{ .Params.number }}</span><p class="resource-category">{{ .Params.category }}</p><h2>{{ .Title }}</h2><p>{{ .Description }}</p><a href="{{ .RelPermalink }}">가이드 읽기 <span class="visually-hidden">: {{ .Title }}</span> <span aria-hidden="true">↗</span></a></article>{{ end }}</section></main>{{- partial "footer.html" . -}}</body></html>

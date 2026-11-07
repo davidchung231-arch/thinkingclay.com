@@ -33,7 +33,7 @@
       {{ $koPath = .RelPermalink }}
     {{ else if hasPrefix .RelPermalink "/about" }}{{ $koPath = "/ko/about/" }}
     {{ else if hasPrefix .RelPermalink "/services" }}{{ $koPath = "/ko/services/" }}
-    {{ else if hasPrefix .RelPermalink "/resources" }}{{ $koPath = "/ko/resources/" }}
+    {{ else if hasPrefix .RelPermalink "/resources/" }}{{ if .IsPage }}{{ $koPath = printf "/ko%s" .RelPermalink }}{{ else }}{{ $koPath = "/ko/resources/" }}{{ end }}
     {{ else if hasPrefix .RelPermalink "/contact" }}{{ $koPath = "/ko/contact/" }}{{ end }}
     <div class="tc-header-tools">
       <div class="tc-language-switch" aria-label="Language switcher">

@@ -17,7 +17,3 @@ For clients working with U.S. professionals, we help prepare meeting agendas and
 ## AI & Business Process Improvement
 
 For teams facing repetitive work, we review a workflow and discuss practical uses of AI tools. Depending on the engagement, we can provide a workflow outline and suggested next steps for testing improvements. [Ask about workflow support](/contact/).
-
-### Separate legal practice
-
-Thinking Clay LLC does not provide legal advice or legal representation. For separate legal services, visit [David S. Chung, Esq.'s attorney practice](/attorney/).

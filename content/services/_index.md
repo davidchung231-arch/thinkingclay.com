@@ -6,9 +6,9 @@ layout: services
 description: "Business support, communication, coordination, and practical AI process improvement from Thinking Clay LLC."
 ---
 
-## U.S. Market Entry & Business Support
+## U.S. & Korea Market Entry & Business Support
 
-For businesses entering or operating in the United States, we help identify operational tasks, organize information, and coordinate with service providers. Depending on the agreed scope, you can expect a task list, organized materials, and follow-up coordination. [Tell us about your needs](/contact/).
+For businesses entering or operating in the U.S. or Korean markets, we help identify operational tasks, organize information, and coordinate with local professionals and service providers. Depending on the agreed scope, deliverables may include a task list, organized materials, and follow-up coordination. [Tell us about your needs](/contact/).
 
 ## Business Communication & Coordination
 

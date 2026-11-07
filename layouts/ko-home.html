@@ -2,17 +2,12 @@
 <html lang="ko">
 <head>
   {{- partial "head.html" . -}}
+  <link rel="preload" as="image" href="/images/hero/mountains.webp" type="image/webp">
 </head>
 <body class="tc-site tc-korean-page">
   {{- partial "header.html" . -}}
   <main id="main-content">
-    <section class="tc-ko-hero" aria-labelledby="ko-title">
-      <p class="tc-eyebrow">THINKING CLAY · ASK. THINK. SOLVE.</p>
-      <h1 id="ko-title">복잡한 문제에도, 길은 있습니다.</h1>
-      <p>그리스 신화에서 아리아드네는 테세우스에게 미궁을 빠져나올 수 있는 실을 건넸습니다. 미로는 그대로였지만, 돌아올 길이 생겼습니다.</p>
-      <p>미국에서 사업을 시작하거나 운영하는 과정에도 낯선 제도와 예상치 못한 어려움이 있습니다. Thinking Clay는 복잡한 상황에서 핵심을 파악하고, 필요한 사람들과 협력하며, 해결의 실마리를 찾아갑니다.</p>
-      <a class="tc-button tc-button-dark" href="/ko/contact/">서비스 문의하기 <span aria-hidden="true">↗</span></a>
-    </section>
+    {{ partial "tc-slideshow.html" . }}
     <section class="tc-ko-section" aria-labelledby="ko-services-title">
       <p class="tc-eyebrow">WHAT WE DO</p>
       <h2 id="ko-services-title" class="tc-ko-three-lines">복잡함을 명확하게.<br>연결을 기회로.<br>계획을 성과로.</h2>

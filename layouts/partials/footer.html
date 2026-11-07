@@ -18,7 +18,6 @@
     <div class="tc-footer-grid">
       <div>
         <a class="tc-footer-brand" href="{{ $footerHome }}">Thinking Clay LLC</a>
-        <p>{{ if $isKo }}미국 사업을 위한 실무 지원과 명확한 커뮤니케이션을 제공합니다.{{ else }}Practical business support and clear communication for success in the U.S.{{ end }}</p>
       </div>
       <nav aria-label="Footer navigation">
         {{ range .Site.Menus.footer }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}

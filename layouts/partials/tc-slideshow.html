@@ -1,4 +1,5 @@
-<section class="tc-hero" aria-labelledby="tc-hero-title" data-slideshow>
+{{ $isKo := eq (.Params.pageLanguage | default "en") "ko" }}
+<section class="tc-hero{{ if $isKo }} tc-hero-ko{{ end }}" aria-labelledby="tc-hero-title" data-slideshow>
   <div class="tc-hero-slides" aria-hidden="true">
     <figure class="tc-slide is-active" data-slide="0"><img src="/images/hero/mountains.webp" alt="Misty mountains and clouds at sunrise" width="1599" height="900" fetchpriority="high" decoding="async"></figure>
     <figure class="tc-slide" data-slide="1"><img src="/images/hero/architecture.webp" alt="Sculptural silver architecture under a quiet sky" width="1599" height="900" loading="lazy" decoding="async"></figure>
@@ -7,22 +8,37 @@
   </div>
   <div class="tc-hero-scrim" aria-hidden="true"></div>
   <div class="tc-hero-content">
+    {{ if $isKo }}
+    <p class="tc-hero-overline">THINKING CLAY · ASK. THINK. SOLVE.</p>
+    <h1 id="tc-hero-title">복잡한 문제에도, 길은 있습니다.</h1>
+    <p class="tc-hero-subtitle">그리스 신화에서 아리아드네는 테세우스에게 미궁을 빠져나올 수 있는 실을 건넸습니다. 미로는 그대로였지만, 돌아올 길이 생겼습니다.</p>
+    <p class="tc-hero-subtitle">미국에서 사업을 시작하거나 운영하는 과정에도 낯선 제도와 예상치 못한 어려움이 있습니다. Thinking Clay는 복잡한 상황에서 핵심을 파악하고, 필요한 사람들과 협력하며, 해결의 실마리를 찾아갑니다.</p>
+    <div class="tc-hero-actions"><a class="tc-button tc-button-light" href="/ko/contact/">서비스 문의하기 <span aria-hidden="true">↗</span></a></div>
+    {{ else }}
     <p class="tc-hero-overline">THINKING CLAY LLC</p>
     <h1 id="tc-hero-title">Ask. Think. Solve.</h1>
     <p class="tc-hero-subtitle">Practical business support and clear communication for success in the U.S.</p>
     <div class="tc-hero-actions"><a class="tc-button tc-button-light" href="/services/">Our services <span aria-hidden="true">↗</span></a><a class="tc-button tc-button-quiet" href="/ko/" lang="ko">한국어 안내 <span aria-hidden="true">↗</span></a></div>
+    {{ end }}
   </div>
-  <div class="tc-hero-controls" aria-label="Hero slideshow controls">
-    <button type="button" class="tc-slide-arrow" data-slide-prev aria-label="Previous hero image">←</button>
-    <div class="tc-slide-dots" role="group" aria-label="Choose hero image">
+  <div class="tc-hero-controls" aria-label="{{ if $isKo }}슬라이드 쇼 조작{{ else }}Hero slideshow controls{{ end }}">
+    <button type="button" class="tc-slide-arrow" data-slide-prev aria-label="{{ if $isKo }}이전 이미지{{ else }}Previous hero image{{ end }}">←</button>
+    <div class="tc-slide-dots" role="group" aria-label="{{ if $isKo }}이미지 선택{{ else }}Choose hero image{{ end }}">
+      {{ if $isKo }}
+      <button type="button" class="is-active" data-slide-dot="0" aria-label="이미지 1 보기" aria-current="true"></button>
+      <button type="button" data-slide-dot="1" aria-label="이미지 2 보기"></button>
+      <button type="button" data-slide-dot="2" aria-label="이미지 3 보기"></button>
+      <button type="button" data-slide-dot="3" aria-label="이미지 4 보기"></button>
+      {{ else }}
       <button type="button" class="is-active" data-slide-dot="0" aria-label="Show hero image 1" aria-current="true"></button>
       <button type="button" data-slide-dot="1" aria-label="Show hero image 2"></button>
       <button type="button" data-slide-dot="2" aria-label="Show hero image 3"></button>
       <button type="button" data-slide-dot="3" aria-label="Show hero image 4"></button>
+      {{ end }}
     </div>
-    <button type="button" class="tc-slide-arrow" data-slide-next aria-label="Next hero image">→</button>
-    <button type="button" class="tc-slide-pause" data-slide-toggle aria-pressed="false">Pause</button>
-    <p class="visually-hidden" data-slide-status aria-live="polite">Hero image 1 of 4</p>
+    <button type="button" class="tc-slide-arrow" data-slide-next aria-label="{{ if $isKo }}다음 이미지{{ else }}Next hero image{{ end }}">→</button>
+    <button type="button" class="tc-slide-pause" data-slide-toggle aria-pressed="false">{{ if $isKo }}일시정지{{ else }}Pause{{ end }}</button>
+    <p class="visually-hidden" data-slide-status aria-live="polite">{{ if $isKo }}이미지 1 / 4{{ else }}Hero image 1 of 4{{ end }}</p>
   </div>
 </section>
 <script>
@@ -42,14 +58,14 @@
     index = (next + slides.length) % slides.length;
     slides.forEach(function (slide, i) { slide.classList.toggle('is-active', i === index); });
     dots.forEach(function (dot, i) { dot.classList.toggle('is-active', i === index); dot.toggleAttribute('aria-current', i === index); });
-    status.textContent = 'Hero image ' + (index + 1) + ' of ' + slides.length;
+    status.textContent = {{ if $isKo }}'이미지 ' + (index + 1) + ' / ' + slides.length{{ else }}'Hero image ' + (index + 1) + ' of ' + slides.length{{ end }};
   }
   function stop() { window.clearInterval(timer); }
   function start() { stop(); if (!paused && !reduceMotion) timer = window.setInterval(function () { show(index + 1); }, 5000); }
   root.querySelector('[data-slide-prev]').addEventListener('click', function () { show(index - 1); start(); });
   root.querySelector('[data-slide-next]').addEventListener('click', function () { show(index + 1); start(); });
   dots.forEach(function (dot, i) { dot.addEventListener('click', function () { show(i); start(); }); });
-  toggle.addEventListener('click', function () { paused = !paused; toggle.setAttribute('aria-pressed', String(paused)); toggle.textContent = paused ? 'Play' : 'Pause'; start(); });
+  toggle.addEventListener('click', function () { paused = !paused; toggle.setAttribute('aria-pressed', String(paused)); toggle.textContent = paused ? {{ if $isKo }}'재생' : '일시정지'{{ else }}'Play' : 'Pause'{{ end }}; start(); });
   root.addEventListener('mouseenter', stop);
   root.addEventListener('mouseleave', start);
   root.addEventListener('focusin', stop);

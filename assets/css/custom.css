@@ -1221,6 +1221,12 @@ body.tc-korean-page .tc-brand-wordmark { font-family: 'Cormorant Garamond', Geor
 .tc-hero-overline,
 .tc-eyebrow { margin: 0 0 1rem; color: var(--tc-muted); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; line-height: 1.4; text-transform: uppercase; }
 .tc-hero-subtitle { max-width: 34rem; margin: 0; color: #F3F1EC; font-size: clamp(1.05rem, 1.7vw, 1.3rem); line-height: 1.55; }
+.tc-hero-ko .tc-hero-scrim { background: rgba(15, 21, 27, 0.82); }
+body.tc-korean-page .tc-hero-ko .tc-hero-overline { color: #f3f1ec; }
+body.tc-korean-page .tc-hero-ko h1 { max-width: 760px; font-size: clamp(2.4rem, 5vw, 4.8rem); line-height: 1.2; word-break: keep-all; }
+body.tc-korean-page .tc-hero-ko .tc-hero-subtitle { max-width: 46rem; margin-top: 1rem; font-size: clamp(1rem, 1.3vw, 1.15rem); line-height: 1.8; word-break: keep-all; }
+body.tc-korean-page .tc-hero-ko .tc-hero-content { padding-bottom: 9rem; }
+body.tc-korean-page .tc-hero-ko :focus-visible { outline-color: #fff; }
 .tc-hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; }
 .tc-button { display: inline-flex; align-items: center; justify-content: center; gap: 0.65rem; min-height: 48px; box-sizing: border-box; padding: 0.75rem 1.25rem; border: 1px solid transparent; font-family: 'Inter', Arial, sans-serif; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.12em; line-height: 1.2; text-decoration: none; text-transform: uppercase; transition: background 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease; }
 .tc-button:hover { transform: translateY(-2px); }

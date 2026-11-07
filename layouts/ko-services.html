@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  {{- partial "head.html" . -}}
+  <style>
+    .tc-ko-services h2 { word-break: keep-all; line-height: 1.25; }
+    .tc-ko-services h2::before { content: counter(section, decimal-leading-zero); color: #59616b; }
+  </style>
+</head>
+<body class="tc-site tc-interior tc-korean-page">
+  {{- partial "header.html" . -}}
+  <main id="main-content">
+    <section class="tc-page-hero" aria-labelledby="page-title"><p class="tc-eyebrow">Thinking Clay LLC</p><h1 id="page-title">{{ .Title }}</h1><p class="tc-page-lead">미국 사업에 필요한 준비부터 전문가와의 소통, 업무 개선까지.</p></section>
+    <section class="tc-reading-section tc-services-content tc-ko-services">{{ .Content }}</section>
+  </main>
+  {{- partial "footer.html" . -}}
+</body>
+</html>

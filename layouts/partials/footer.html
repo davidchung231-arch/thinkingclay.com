@@ -9,12 +9,10 @@
   {{ else }}
   {{ $isKo := eq (.Params.pageLanguage | default "en") "ko" }}
   {{ $footerHome := "/" }}
-  {{ $attorneyFooterLabel := "Independent Attorney Services — David S. Chung, Esq." }}
-  {{ $footerEntity := "Thinking Clay LLC provides business advisory services and does not provide legal services. Legal services are provided separately by David S. Chung, Esq." }}
+  {{ $footerEntity := "Thinking Clay LLC provides business support and coordination services, not legal advice or representation." }}
   {{ if $isKo }}
     {{ $footerHome = "/ko/" }}
-    {{ $attorneyFooterLabel = "별도 변호사 법률서비스 — David S. Chung, Esq." }}
-    {{ $footerEntity = "Thinking Clay LLC는 비즈니스 자문 및 업무 지원 서비스를 제공하며, 법률서비스는 별도로 제공됩니다." }}
+    {{ $footerEntity = "Thinking Clay LLC는 비즈니스 지원 및 업무 조율 서비스를 제공하며, 법률자문이나 법률대리는 제공하지 않습니다." }}
   {{ end }}
   <div class="tc-footer-inner">
     <div class="tc-footer-grid">
@@ -26,7 +24,6 @@
         {{ range .Site.Menus.footer }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}
       </nav>
     </div>
-    <p class="tc-footer-attorney"><a href="/attorney/">{{ $attorneyFooterLabel }} <span aria-hidden="true">↗</span></a></p>
     <p class="tc-footer-entity">{{ $footerEntity }}</p>
     <p class="tc-footer-copyright">&copy; {{ now.Year }} Thinking Clay LLC. All rights reserved.</p>
   </div>

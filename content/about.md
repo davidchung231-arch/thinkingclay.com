@@ -16,8 +16,6 @@ When a company needs FDA regulatory research for a new product category, we buil
 
 When a seller needs to expand across borders or optimize an Amazon business, we embed enough to see the bottlenecks, then fix them alongside your team.
 
-When a business needs legal structure, contract precision, or entity planning, David S. Chung, Esq. provides the strategy and drafting — but in coordination with the operational reality, not in isolation.
-
 ## Where we sit
 
 We are not a law firm. We are not a traditional management consultant. We are a hybrid: an outside operator with legal and regulatory depth, hired to do the work that generalist staff can't.
@@ -31,6 +29,6 @@ We are not a law firm. We are not a traditional management consultant. We are a 
 
 ---
 
-Thinking Clay LLC is a business advisory company. Legal services are provided separately by David S. Chung, Esq., Attorney at Law, admitted in the State of New York.
+Thinking Clay LLC is a business advisory company and does not provide legal advice or representation.
 
 David S. Chung, Esq. is admitted to practice law only in the State of New York unless otherwise expressly stated. Prior results do not guarantee a similar outcome.

@@ -14,6 +14,7 @@ layout: attorney-page
     <p class="attorney-service-index">01</p>
     <h2>Commercial Contracts</h2>
     <p>Review, drafting, and negotiation support for commercial agreements, with attention to practical obligations, risk allocation, and the decisions that matter before signing.</p>
+    <p><a href="/attorney/insights/commercial-contract-checklist/">5 Things to Check Before Signing a Commercial Contract</a></p>
   </article>
   <article class="attorney-service-card attorney-reveal">
     <p class="attorney-service-index">02</p>

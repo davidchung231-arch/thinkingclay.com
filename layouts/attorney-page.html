@@ -15,9 +15,9 @@
       <div class="attorney-interior-content">
         {{ .Content }}
       </div>
-      <div class="attorney-disclosure">
+      {{ if not .Params.articleDisclosure }}<div class="attorney-disclosure">
         <p><strong>Attorney Advertising.</strong> The information contained on this website is provided for general informational purposes only and does not constitute legal advice. Viewing this website, contacting or communicating with David S. Chung does not create an attorney-client relationship. An attorney-client relationship is established only through a written engagement agreement. Please do not submit confidential or time-sensitive information through this website until an attorney-client relationship has been established. Prior results do not guarantee a similar outcome.</p>
-      </div>
+      </div>{{ end }}
     </article>
   </main>
   {{- partial "attorney-motion.html" . -}}

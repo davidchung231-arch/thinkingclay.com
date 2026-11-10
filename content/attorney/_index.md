@@ -1,6 +1,7 @@
 ---
 title: "David S. Chung, Esq. | Attorney at Law"
-description: "New York-law business legal advisory, commercial contracts, and cross-border transaction guidance by David S. Chung, Esq."
+seoTitle: "New York Business Attorney | David S. Chung, Esq."
+description: "David S. Chung, Esq. provides New York-law guidance on commercial contracts and authorized legal matters involving U.S.–Korea business transactions."
 date: 2026-01-01
 draft: false
 layout: attorney

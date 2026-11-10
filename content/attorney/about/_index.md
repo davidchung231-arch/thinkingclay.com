@@ -1,6 +1,7 @@
 ---
 title: "About David S. Chung, Esq."
-description: "Background, approach, and technology perspective of David S. Chung, Esq."
+seoTitle: "About David S. Chung, Esq. | New York Business Attorney"
+description: "Learn about David S. Chung's corporate legal background and practical approach to business legal matters and commercial risk."
 date: 2026-01-01
 draft: false
 layout: attorney-page

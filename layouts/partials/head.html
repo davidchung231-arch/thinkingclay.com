@@ -4,7 +4,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@1.3.9/dist/web/static/pretendard.css">
 {{ end }}
-<title>{{ with .Title }}{{ . }} | {{ end }}Thinking Clay</title>
+<title>{{ with .Params.seoTitle }}{{ . }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}Thinking Clay{{ end }}</title>
 {{ if not (hasPrefix .RelPermalink "/attorney") }}
   <meta name="description" content="{{ .Description | default .Site.Params.description }}">
 {{ end }}

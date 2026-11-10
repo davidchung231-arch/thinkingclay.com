@@ -1,6 +1,7 @@
 ---
 title: "Legal Services"
-description: "Commercial contracts, business legal advisory, regulatory, intellectual property, technology, and U.S.–Korea transaction services."
+seoTitle: "Commercial Contracts & Business Legal Services | David S. Chung"
+description: "New York-law contract review and legal guidance for U.S.–Korea business matters where authorized. Korean-law matters should involve appropriately admitted Korean counsel."
 date: 2026-01-01
 draft: false
 layout: attorney-page

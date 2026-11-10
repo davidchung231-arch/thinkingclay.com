@@ -1,6 +1,7 @@
 ---
 title: "Attorney Profile"
-description: "Education and professional background of David S. Chung, Esq."
+seoTitle: "Attorney Profile | David S. Chung, Esq."
+description: "Review the education and experience of New York attorney David S. Chung in corporate legal work, commercial contracts, and cross-border transactions."
 date: 2026-01-01
 draft: false
 layout: attorney-page
